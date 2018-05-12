@@ -1,0 +1,14 @@
+C:\Users\Niki\source\repos\06 - TwoNumbers\06 - TwoNumbers\bin\Debug\06 - TwoNumbers.exe.config
+C:\Users\Niki\source\repos\06 - TwoNumbers\06 - TwoNumbers\bin\Debug\06 - TwoNumbers.exe
+C:\Users\Niki\source\repos\06 - TwoNumbers\06 - TwoNumbers\bin\Debug\06 - TwoNumbers.pdb
+C:\Users\Niki\source\repos\06 - TwoNumbers\06 - TwoNumbers\obj\Debug\06 - TwoNumbers.csprojAssemblyReference.cache
+C:\Users\Niki\source\repos\06 - TwoNumbers\06 - TwoNumbers\obj\Debug\06 - TwoNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Niki\source\repos\06 - TwoNumbers\06 - TwoNumbers\obj\Debug\06 - TwoNumbers.exe
+C:\Users\Niki\source\repos\06 - TwoNumbers\06 - TwoNumbers\obj\Debug\06 - TwoNumbers.pdb
+C:\Users\Niki\source\repos\05 - TwoNumbers\06 - TwoNumbers\obj\Debug\06 - TwoNumbers.csprojAssemblyReference.cache
+C:\Users\Niki\source\repos\05 - TwoNumbers\06 - TwoNumbers\obj\Debug\06 - TwoNumbers.csproj.CoreCompileInputs.cache
+C:\Users\Niki\source\repos\05 - TwoNumbers\06 - TwoNumbers\obj\Debug\06 - TwoNumbers.exe
+C:\Users\Niki\source\repos\05 - TwoNumbers\06 - TwoNumbers\obj\Debug\06 - TwoNumbers.pdb
+C:\Users\Niki\source\repos\05 - TwoNumbers\06 - TwoNumbers\bin\Debug\06 - TwoNumbers.exe.config
+C:\Users\Niki\source\repos\05 - TwoNumbers\06 - TwoNumbers\bin\Debug\06 - TwoNumbers.exe
+C:\Users\Niki\source\repos\05 - TwoNumbers\06 - TwoNumbers\bin\Debug\06 - TwoNumbers.pdb

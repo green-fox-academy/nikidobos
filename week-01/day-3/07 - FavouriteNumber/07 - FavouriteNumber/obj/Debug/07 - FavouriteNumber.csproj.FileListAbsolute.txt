@@ -1,0 +1,6 @@
+C:\Users\Niki\source\repos\07 - FavouriteNumber\07 - FavouriteNumber\obj\Debug\07 - FavouriteNumber.csproj.CoreCompileInputs.cache
+C:\Users\Niki\source\repos\07 - FavouriteNumber\07 - FavouriteNumber\bin\Debug\07 - FavouriteNumber.exe.config
+C:\Users\Niki\source\repos\07 - FavouriteNumber\07 - FavouriteNumber\bin\Debug\07 - FavouriteNumber.exe
+C:\Users\Niki\source\repos\07 - FavouriteNumber\07 - FavouriteNumber\bin\Debug\07 - FavouriteNumber.pdb
+C:\Users\Niki\source\repos\07 - FavouriteNumber\07 - FavouriteNumber\obj\Debug\07 - FavouriteNumber.exe
+C:\Users\Niki\source\repos\07 - FavouriteNumber\07 - FavouriteNumber\obj\Debug\07 - FavouriteNumber.pdb
