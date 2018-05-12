@@ -1,7 +1,0 @@
-C:\Users\Niki\source\repos\11 - VariableMutation\11 - VariableMutation\bin\Debug\11 - VariableMutation.exe.config
-C:\Users\Niki\source\repos\11 - VariableMutation\11 - VariableMutation\bin\Debug\11 - VariableMutation.exe
-C:\Users\Niki\source\repos\11 - VariableMutation\11 - VariableMutation\bin\Debug\11 - VariableMutation.pdb
-C:\Users\Niki\source\repos\11 - VariableMutation\11 - VariableMutation\obj\Debug\11 - VariableMutation.csprojAssemblyReference.cache
-C:\Users\Niki\source\repos\11 - VariableMutation\11 - VariableMutation\obj\Debug\11 - VariableMutation.csproj.CoreCompileInputs.cache
-C:\Users\Niki\source\repos\11 - VariableMutation\11 - VariableMutation\obj\Debug\11 - VariableMutation.exe
-C:\Users\Niki\source\repos\11 - VariableMutation\11 - VariableMutation\obj\Debug\11 - VariableMutation.pdb

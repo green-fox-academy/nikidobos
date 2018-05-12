@@ -1,7 +1,0 @@
-C:\Users\Niki\source\repos\HelloMe\HelloMe\bin\Debug\HelloMe.exe.config
-C:\Users\Niki\source\repos\HelloMe\HelloMe\bin\Debug\HelloMe.exe
-C:\Users\Niki\source\repos\HelloMe\HelloMe\bin\Debug\HelloMe.pdb
-C:\Users\Niki\source\repos\HelloMe\HelloMe\obj\Debug\HelloMe.csprojAssemblyReference.cache
-C:\Users\Niki\source\repos\HelloMe\HelloMe\obj\Debug\HelloMe.csproj.CoreCompileInputs.cache
-C:\Users\Niki\source\repos\HelloMe\HelloMe\obj\Debug\HelloMe.exe
-C:\Users\Niki\source\repos\HelloMe\HelloMe\obj\Debug\HelloMe.pdb

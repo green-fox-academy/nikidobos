@@ -1,7 +1,0 @@
-C:\Users\Niki\source\repos\10 - DefineBasicInfo\10 - DefineBasicInfo\obj\Debug\10 - DefineBasicInfo.csprojAssemblyReference.cache
-C:\Users\Niki\source\repos\10 - DefineBasicInfo\10 - DefineBasicInfo\obj\Debug\10 - DefineBasicInfo.csproj.CoreCompileInputs.cache
-C:\Users\Niki\source\repos\10 - DefineBasicInfo\10 - DefineBasicInfo\bin\Debug\10 - DefineBasicInfo.exe.config
-C:\Users\Niki\source\repos\10 - DefineBasicInfo\10 - DefineBasicInfo\bin\Debug\10 - DefineBasicInfo.exe
-C:\Users\Niki\source\repos\10 - DefineBasicInfo\10 - DefineBasicInfo\bin\Debug\10 - DefineBasicInfo.pdb
-C:\Users\Niki\source\repos\10 - DefineBasicInfo\10 - DefineBasicInfo\obj\Debug\10 - DefineBasicInfo.exe
-C:\Users\Niki\source\repos\10 - DefineBasicInfo\10 - DefineBasicInfo\obj\Debug\10 - DefineBasicInfo.pdb

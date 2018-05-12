@@ -1,7 +1,0 @@
-C:\Users\Niki\source\repos\08 - Swap\08 - Swap\obj\Debug\08 - Swap.csproj.CoreCompileInputs.cache
-C:\Users\Niki\source\repos\08 - Swap\08 - Swap\bin\Debug\08 - Swap.exe.config
-C:\Users\Niki\source\repos\08 - Swap\08 - Swap\bin\Debug\08 - Swap.exe
-C:\Users\Niki\source\repos\08 - Swap\08 - Swap\bin\Debug\08 - Swap.pdb
-C:\Users\Niki\source\repos\08 - Swap\08 - Swap\obj\Debug\08 - Swap.exe
-C:\Users\Niki\source\repos\08 - Swap\08 - Swap\obj\Debug\08 - Swap.pdb
-C:\Users\Niki\source\repos\08 - Swap\08 - Swap\obj\Debug\08 - Swap.csprojAssemblyReference.cache

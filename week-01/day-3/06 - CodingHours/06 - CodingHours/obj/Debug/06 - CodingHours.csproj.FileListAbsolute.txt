@@ -1,7 +1,0 @@
-C:\Users\Niki\source\repos\06 - CodingHours\06 - CodingHours\bin\Debug\06 - CodingHours.exe.config
-C:\Users\Niki\source\repos\06 - CodingHours\06 - CodingHours\bin\Debug\06 - CodingHours.exe
-C:\Users\Niki\source\repos\06 - CodingHours\06 - CodingHours\bin\Debug\06 - CodingHours.pdb
-C:\Users\Niki\source\repos\06 - CodingHours\06 - CodingHours\obj\Debug\06 - CodingHours.csprojAssemblyReference.cache
-C:\Users\Niki\source\repos\06 - CodingHours\06 - CodingHours\obj\Debug\06 - CodingHours.csproj.CoreCompileInputs.cache
-C:\Users\Niki\source\repos\06 - CodingHours\06 - CodingHours\obj\Debug\06 - CodingHours.exe
-C:\Users\Niki\source\repos\06 - CodingHours\06 - CodingHours\obj\Debug\06 - CodingHours.pdb
