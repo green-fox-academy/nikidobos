@@ -1,0 +1,66 @@
+
+.content {
+    padding: 10%;
+    background-image: url("file:///C:/Users/Niki/Desktop/Prog/GF/05.%2008/topography.png");
+    font-family: "Roboto Slab";
+}
+
+p {
+    font-family: "consolas", courier
+}
+
+a {
+    color: #ff0099;
+}
+
+header {
+    width: 100%;
+    display: inline-block;
+    background-color: #333333;
+    color: #ff0099;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: "Roboto Slab";
+    
+}
+
+#img {
+   float: left;
+   padding-left: 10%;
+   padding-top: 10px;
+}
+
+li {
+    text-transform: uppercase;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.linkedin {
+    padding-right: 160px;
+}
+
+.tech {
+    text-align: center;
+    line-height: 2.5;
+}
+
+.fsd {
+    color: #ff0099
+}
+
+.descripition {
+    font-family: "Consolas", courier;
+}
+
+.name {
+    font-size: 300%;
+}
+
+.lines {
+    text-align: center;
+}
