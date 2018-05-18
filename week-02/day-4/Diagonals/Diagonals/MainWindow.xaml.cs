@@ -15,28 +15,30 @@ namespace Diagonals
             // Draw the canvas' diagonals.
             // If it starts from the upper-left corner it should be green, otherwise it should be red.
 
-            //foxDraw.StrokeColor(Colors.Green);
-            //foxDraw.DrawLine(0, 0, canvas.Width, canvas.Height );
+            var p1 = new Point(0, 0);
+            var p2 = new Point(canvas.Width, canvas.Height);
+            var p3 = new Point(0, canvas.Height);
+            var p4 = new Point(canvas.Width, 0);
 
-            double a = 0;
-            double b = 2;
-            var startPoint = new Point(a, b);
-            var endPoint = new Point(canvas.Width, canvas.Height);
-            
+            DrawLine(p1, p2, foxDraw);
+            DrawLine(p3, p4, foxDraw);
+        }
 
-            if (a == 0 && b == 0)
+        public static void DrawLine(Point startPoint, Point endPoint, FoxDraw foxDraw)
+        {
+            if ((startPoint.X == 0 && startPoint.Y == 0) || (endPoint.X == 0 && endPoint.Y == 0))
             {
                 foxDraw.StrokeColor(Colors.Green);
                 foxDraw.DrawLine(startPoint, endPoint);
-            }
 
+            }
             else
             {
                 foxDraw.StrokeColor(Colors.Red);
                 foxDraw.DrawLine(startPoint, endPoint);
-            }            
-                        
+            }
         }
+
     }
 
 }
