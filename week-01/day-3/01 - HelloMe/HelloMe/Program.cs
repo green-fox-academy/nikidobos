@@ -7,7 +7,7 @@ namespace GreenFox
     {
         static void Main(string[] args)
         {
-                       Console.WriteLine("Hello, Niki!");
+            Console.WriteLine("Hello, Niki!");
             Console.ReadLine();
         }
     }
