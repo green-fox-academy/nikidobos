@@ -37,21 +37,19 @@ namespace _21___PartyIndicator
 
             numberOfBoys = Int32.Parse(Console.ReadLine());
 
-            if (numberOfGirls == numberOfBoys && numberOfBoys + numberOfGirls > 20)
+            if ((numberOfGirls == numberOfBoys) && (numberOfBoys + numberOfGirls) > 20)
             {
                 Console.WriteLine("The party is exellent!");
             }
-
             else if (numberOfGirls == 0)
             {
-                    Console.WriteLine("Sausage party");
+                Console.WriteLine("Sausage party");
             }
-
-            else if (numberOfGirls != numberOfBoys && numberOfBoys + numberOfGirls > 20)
+            else if ((numberOfGirls != numberOfBoys) && (numberOfBoys+ numberOfGirls) > 20)
             {
                 Console.WriteLine("Quite cool party!");
             }
-            else if (numberOfBoys + numberOfGirls < 20)
+            else if (numberOfBoys + numberOfGirls <= 20)
             {
                 Console.WriteLine("Average party...");
             }
