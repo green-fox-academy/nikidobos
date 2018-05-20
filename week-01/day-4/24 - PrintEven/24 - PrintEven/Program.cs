@@ -17,10 +17,7 @@ namespace GreenFox
                     Console.WriteLine(i);
                 }
             }
-
             Console.ReadKey();
-
-
         }
     }
 }
