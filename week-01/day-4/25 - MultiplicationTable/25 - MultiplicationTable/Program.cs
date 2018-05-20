@@ -22,8 +22,6 @@ namespace GreenFox
             // 9 * 15 = 135
             // 10 * 15 = 150
 
-
-
             Console.WriteLine("Hello! Please write a number: ");
 
             int Number = int.Parse(Console.ReadLine());
@@ -35,10 +33,7 @@ namespace GreenFox
                 //Console.WriteLine(Number + " * " + i + " = " + i * Number);
                 Console.WriteLine("{0} * {1} = {2}", Number, i, Number * i);
             }
-
             Console.ReadLine();
-
-
         }
     }
 }
