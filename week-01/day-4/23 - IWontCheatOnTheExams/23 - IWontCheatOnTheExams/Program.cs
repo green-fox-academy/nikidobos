@@ -15,9 +15,7 @@ namespace GreenFox
             for (int i = 0; i < times; i++)
             {
                 Console.WriteLine(sentence);
-
             }
-
             Console.ReadKey();
         }
     }
