@@ -17,7 +17,6 @@ namespace _18___OddEven
             int myNumber;
 
             Console.WriteLine("Hello! Write a number: ");
-
             myNumber = Int32.Parse(Console.ReadLine());
 
             if (myNumber%2 == 0)
