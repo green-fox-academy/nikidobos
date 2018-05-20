@@ -29,7 +29,6 @@ namespace GreenFox
             {
                 Console.WriteLine("The second number should be bigger");
             }
-
             else
             {
                 for (int i = Number1; i < Number2; i++)
@@ -37,10 +36,7 @@ namespace GreenFox
                     Console.WriteLine(i);
                 }
             }
-
             Console.ReadKey();
-
-
         }
     }
 }
