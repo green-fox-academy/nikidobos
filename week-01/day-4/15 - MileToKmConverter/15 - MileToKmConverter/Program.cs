@@ -16,7 +16,7 @@ namespace GreenFox
             double converterNumber = 0.621;
             double distanceInMiles = distanceInKm * converterNumber;
 
-            Console.WriteLine("So the distance is  " + distanceInMiles + " in miles.");
+            Console.WriteLine("So the distance is " + distanceInMiles + " in miles.");
 
             Console.ReadLine();
 
