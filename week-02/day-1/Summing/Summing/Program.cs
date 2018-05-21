@@ -11,12 +11,9 @@ namespace Sum
 
             Console.WriteLine("Please give me a number: ");
 
+            int number = int.Parse(Console.ReadLine());
 
-            string number = Console.ReadLine();
-            int theNumber = int.Parse(number);
-
-            Console.WriteLine(sum(theNumber));
-
+            Console.WriteLine(sum(number));
             Console.ReadKey();
         }
 
@@ -24,7 +21,7 @@ namespace Sum
         {
             int j = 0;
 
-            for (int i = 0; i < theNumber; i++)
+            for (int i = 0; i <= theNumber; i++)
             {
                 j = j + i;
             }
