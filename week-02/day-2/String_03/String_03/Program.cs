@@ -14,8 +14,7 @@ namespace TakesLonger
             // Using pieces of the quote variable (instead of just redefining the string)
         
             StringBuilder quoteBuilder = new StringBuilder(quote);
-            quoteBuilder
-                .Insert(21, "always takes longer than ");
+            quoteBuilder.Insert(21, "always takes longer than ");
 
             Console.WriteLine(quoteBuilder);
             Console.ReadKey();
