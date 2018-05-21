@@ -16,10 +16,7 @@ namespace PrintAll
             {
                 Console.WriteLine("{0}", item);
             }
-
             Console.ReadLine();
-
-
         }
     }
 }
