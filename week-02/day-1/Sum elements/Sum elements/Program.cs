@@ -12,11 +12,8 @@ namespace SumElements
 
             int[] r = { 54, 23, 66, 12 };
 
-            Console.WriteLine( r[1] +  r[2]);
-
+            Console.WriteLine(r[1] +  r[2]);
             Console.ReadLine();
-
-
         }
 
     }
