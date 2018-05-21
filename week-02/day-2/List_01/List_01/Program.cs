@@ -20,10 +20,9 @@ namespace SolarSystem
             string printablePlanets = "";
             foreach (var planet in planets)
             {
-                printablePlanets += $"\"{planet}\", ";
+                printablePlanets += $"\"{planet}\",";
             }
-            //printablePlanets = printablePlanets.Remove(printablePlanets.Length - 2, 2);
-            return printablePlanets;
+            return printablePlanets.Substring(0, printablePlanets.Length - 1);
         }
     }
 }
