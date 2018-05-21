@@ -10,13 +10,10 @@ namespace Factorio
             //   that returns it's input's factorial
 
             Console.WriteLine("Please give me a number: ");
+            
+            int number = int.Parse(Console.ReadLine());
 
-
-            string number = Console.ReadLine();
-            int theNumber = int.Parse(number);
-
-            Console.WriteLine(factorio(theNumber));
-
+            Console.WriteLine(factorio(number));
             Console.ReadKey();
         }
 
