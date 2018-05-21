@@ -7,7 +7,7 @@ namespace TodoPrint
     {
         public static void Main(string[] args)
         {
-            string todoText = " - Buy milk\n";
+            string todoText = "My todo: \n - Buy milk\n";
 
             // Add "My todo:" to the beginning of the todoText
             // Add " - Download games" to the end of the todoText
@@ -19,13 +19,11 @@ namespace TodoPrint
             //  - Buy milk
             //  - Download games
             //      - Diablo
-
-
+            
             StringBuilder toDoBuilder = new StringBuilder(todoText);
             toDoBuilder
                 .Append(" - Download games\n")
                 .Append("\t- Diablo");
-
 
             Console.WriteLine(toDoBuilder);
             Console.ReadKey();
