@@ -13,15 +13,13 @@ namespace SwapElements
             string[] abc = { "first", "second", "third" };
 
             string temp = abc[0];
-
             abc[0] = abc[2];
             abc[2] = temp;
             foreach (string item in abc)
             {
                 Console.WriteLine(item);
-            }
-            
-                    Console.ReadLine();
+            }            
+            Console.ReadLine();
         }
 
     }
