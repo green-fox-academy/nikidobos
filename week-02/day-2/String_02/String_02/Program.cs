@@ -6,8 +6,6 @@ namespace UrlFixer
     {
         public static void Main(string[] args)
         {
-            //string url = "https" + ":" + "//www.reddit.com/r/nevertellmethebots";
-
             string url = string.Format("https{0}//www.reddit.com/r/nevertellmethebots", ":");
 
             // Accidentally I got the wrong URL for a funny subreddit. It's probably "odds" and not "bots"
@@ -16,7 +14,7 @@ namespace UrlFixer
 
             string replacedUrl = url.Replace("bots", "odds");
 
-            Console.WriteLine(url);
+            Console.WriteLine(replacedUrl);
             Console.ReadKey();
         }
     }
