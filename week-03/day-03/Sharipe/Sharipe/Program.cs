@@ -36,20 +36,34 @@ namespace Sharipe
             greenSharpie.Use();
             Console.WriteLine("I used the greensharpie five times, so the inkamount is: " + greenSharpie.inkamount);
 
-            purpleSharpie.Use();
-            for (float i = purpleSharpie.inkamount; i > 80; i--)
-            { 
-                if (i == 99)
+            int i = 0;
+            while (purpleSharpie.inkamount > 80)
+            {
+                purpleSharpie.Use();
+                if (i == 0)
                 {
-                    Console.WriteLine("I used the purplesharpie once, so the inkamount is: " + i);
+                    Console.WriteLine("I used the purplesharpie once, so the inkamount is: " + purpleSharpie.inkamount);
+                    i++;
                 }
                 else
                 {
-                    Console.WriteLine("I used the purplesharpie again, so the inkamount is: " + i);
-                }
-                                   
+                    Console.WriteLine("I used the purplesharpie again, so the inkamount is: " + purpleSharpie.inkamount);
+                    i++;
+                }                
             }
 
+            for (int j = 0; redSharpie.inkamount > 88; j++)
+            {
+                redSharpie.Use();
+                if (j == 0)
+                {
+                    Console.WriteLine("I used the redsharpie once, so the inkamount is: " + redSharpie.inkamount);
+                }
+                else
+                {
+                    Console.WriteLine("I used the redsharpie again, so the inkamount is: " + redSharpie.inkamount);
+                }
+            }
             Console.ReadKey();
         }
     }
