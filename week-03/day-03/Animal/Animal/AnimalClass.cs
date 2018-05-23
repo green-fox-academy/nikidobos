@@ -19,12 +19,6 @@ namespace Animal
         public int hunger = 50;
         public int thirst = 50;
 
-
-        //public AnimalClass(int hunger, int thirst, int play)
-        //{
-        //    this.hunger = hunger;
-        //    this.thirst = thirst;
-        //}
         public int Eat()
         {
             hunger -= 1;
@@ -42,6 +36,5 @@ namespace Animal
             hunger += 1;
             thirst += 1;
         }
-
     }
 }
