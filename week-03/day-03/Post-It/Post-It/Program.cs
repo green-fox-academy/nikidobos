@@ -17,14 +17,11 @@ namespace Post_It
             Postit firstPostIt = new Postit("orange", "Idea 1", "blue");
             Console.WriteLine($"{firstPostIt.backgroungColor}, {firstPostIt.text}, {firstPostIt.textColor}");
 
-            
             Postit secondPostIt = new Postit("pink", "Awesome", "black");
             Console.WriteLine($"{secondPostIt.backgroungColor}, {secondPostIt.text}, {secondPostIt.textColor}");
 
             Postit thirdPostIt = new Postit("yellow", "Superb", "green");
             Console.WriteLine($"{thirdPostIt.backgroungColor}, {thirdPostIt.text}, {thirdPostIt.textColor}");
-
-            
 
             Console.ReadKey();
         }
