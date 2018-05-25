@@ -25,14 +25,14 @@ namespace Triangles
         {
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
-            // DrawRectangle(foxDraw);
-            Square square = new Square();
-            DrawRectangle(square);
+            DrawRectangle(foxDraw);
         }
 
-        public void DrawRectangle(Square square)
+        public void DrawRectangle(FoxDraw foxDraw)
         {
-            square.DrawRectangle();
+            
+            Square square = new Square();
+            square.DrawRectangle(foxDraw);
         }
 
     }

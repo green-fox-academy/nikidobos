@@ -14,8 +14,6 @@ namespace Triangles
             foxDraw.StrokeColor(Colors.Black);
             foxDraw.FillColor(Colors.Transparent);
             foxDraw.DrawRectangle(0.25 * foxDraw.Canvas.Width, 0.25 * foxDraw.Canvas.Height, 0.25 * foxDraw.Canvas.Width, 0.25 * foxDraw.Canvas.Height, 15);
-
         }
-
     }
 }
