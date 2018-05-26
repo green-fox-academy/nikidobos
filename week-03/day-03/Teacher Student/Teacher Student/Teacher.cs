@@ -14,14 +14,14 @@ namespace Teacher_Student
 
         public void Teach (Student student)
         {
-            string teaching = "I am teaching the students for mathematics.";
+            string teaching = "Teacher: I am teaching the students for mathematics.";
             Console.WriteLine(teaching);
             student.Learn();
         }
 
         public void Answer()
         {
-            string answer = "1 + 1 equals 2.";
+            string answer = "Teacher: 1 + 1 equals 2.";
             Console.WriteLine(answer);
         }
 

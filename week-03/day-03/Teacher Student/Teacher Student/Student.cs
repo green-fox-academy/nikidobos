@@ -14,13 +14,13 @@ namespace Teacher_Student
 
         public void Learn()
         {
-            string studentLearning = "I am learning how to add numbers.";
+            string studentLearning = "Student: I am learning how to add numbers.";
             Console.WriteLine(studentLearning);
         }
 
         public void Question (Teacher teacher)
         {
-            string studentquestion = "How many is 1 + 1?";
+            string studentquestion = "Student: How many is 1 + 1?";
             Console.WriteLine(studentquestion);
             teacher.Answer();
         }
