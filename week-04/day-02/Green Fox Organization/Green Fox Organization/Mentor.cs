@@ -12,11 +12,17 @@ namespace Green_Fox_Organization
 
         public Mentor(string name, int age, string gender, string level) : base(name, age, gender)
         {
-            this.level = level;
+            this.level = "senior";
+        }
+ 
+        public override string GetGoal()
+        {
+            return String.Format("Hi, I'm name, a age year old {0} level mentor.", level);
         }
 
-       // GetGoal() : prints out "Educate brilliant junior software developers."
-        //Introduce() : "Hi, I'm name, a age year old gender level mentor."
-
+        public override string Introduce()
+        {
+            return String.Format("Hi, I'm {0}, a {1} year old {2} {3} mentor.", name, age, gender, level)
+        }
     }
 }
