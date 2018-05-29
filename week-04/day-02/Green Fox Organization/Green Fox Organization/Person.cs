@@ -43,12 +43,12 @@ namespace Green_Fox_Organization
             }
         }
 
-        public string Introduce(string name, int age, string gender)
+        public virtual string Introduce()
         {
             return String.Format("Hi, I'm {0}, a {1} year old {2}.", name, age, gender);
         }
 
-        public string GetGoal()
+        public virtual string GetGoal()
         {
             return String.Format("My goal is: Live for the moment!"); 
 

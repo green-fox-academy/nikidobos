@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Green_Fox_Organization
 {
-    class Mentor
+    class Mentor: Person
     {
     }
 }
