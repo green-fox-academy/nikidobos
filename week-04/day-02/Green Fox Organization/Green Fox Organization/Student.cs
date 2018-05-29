@@ -47,5 +47,6 @@ namespace Green_Fox_Organization
         {
             skippedDays += daysForSkip;
         }
+
     }
 }

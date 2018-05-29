@@ -51,7 +51,6 @@ namespace Green_Fox_Organization
         public virtual string GetGoal()
         {
             return String.Format("My goal is: Live for the moment!"); 
-
         }
     }
 }

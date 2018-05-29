@@ -9,27 +9,27 @@ namespace Green_Fox_Organization
     class Cohort
     {
         public string name;
-        public List<string> students;
-        public List<string> mentors;
+        public List<Student> students;
+        public List<Mentor> mentors;
 
         public Cohort(string name, List<string> students, List<string> mentors)
         {
             this.name = "Fulvipes";
-            List<string> students = new List<string>();
-            List<string> mentors = new List<string>();
+            students = new List<string>();
+            mentors = new List<string>();
         }
-         //       addStudent(Student) : adds the given Student to students list
+         //addStudent(Student) : adds the given Student to students list
          //addMentor(Mentor): adds the given Mentor to mentors list
          //info(): prints out "The name cohort has students.size() students and mentors.size() mentors."
 
-        public void AddStudent()
+        public void AddStudent(Student student)
         {
-            students.Add();
+            students.Add(student);
         }
-
-        public void AddMentor()
+        
+        public void AddMentor(Mentor mentor)
         {
-
+            mentors.Add(mentor)
         }
 
         public string Info()

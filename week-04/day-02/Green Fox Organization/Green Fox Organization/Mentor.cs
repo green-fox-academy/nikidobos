@@ -22,7 +22,8 @@ namespace Green_Fox_Organization
 
         public override string Introduce()
         {
-            return String.Format("Hi, I'm {0}, a {1} year old {2} {3} mentor.", name, age, gender, level)
+            return String.Format("Hi, I'm {0}, a {1} year old {2} {3} mentor.", name, age, gender, level);
         }
+
     }
 }
