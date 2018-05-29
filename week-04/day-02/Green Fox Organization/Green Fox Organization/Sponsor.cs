@@ -13,7 +13,7 @@ namespace Green_Fox_Organization
 
         public Sponsor(string name, int age, string gender, string company) : base (name, age, gender)
         {
-            this.company = "Bosch";
+            this.company = "Google";
         }
 
         public override string Introduce()
@@ -30,7 +30,6 @@ namespace Green_Fox_Organization
         {
             return String.Format("Hire brilliant junior software developers");
         }
-
 
     }
 }
