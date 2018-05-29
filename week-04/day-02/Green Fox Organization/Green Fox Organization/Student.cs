@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace Green_Fox_Organization
 {
-    class Student: Person
+    class Student : Person
     {
-        public string previousOrganization;
-        public int skippedDays;
+        private string previousOrganization;
+        private int skippedDays;
 
-        public Student(string name, int age, string gender, string previousOrganization, int skippedDays) :base(name, age, gender)
+        public Student()
         {
             this.previousOrganization = "The School of Life";
             this.skippedDays = 0;
+        }
+        public Student(string name, int age, string gender, string previousOrganization) : base(name, age, gender)
+        {
+            this.previousOrganization = previousOrganization;
         }
 
         public string PreviousOrganization
@@ -35,7 +39,7 @@ namespace Green_Fox_Organization
 
         public override string Introduce()
         {
-            return String.Format("Hi, I'm {0}, a {1} year old {2} from {3} who skipped {4} days from the course already.", name, age, gender, previousOrganization, skippedDays);
+            return String.Format("Hi, I'm {0}, a {1} year old {2} from {3} who skipped {4} days from the course already.", Name, Age, Gender, previousOrganization, skippedDays);
         }
 
         public override string GetGoal()
