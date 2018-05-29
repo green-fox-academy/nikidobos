@@ -15,9 +15,6 @@ namespace Green_Fox_Organization
         {
             this.company = "Bosch";
         }
-        //        Introduce() : "Hi, I'm name, a age year old gender who represents company and hired hiredStudents students so far."
-        //Hire() : increase hiredStudents by 1
-        //GetGoal() : prints out "Hire brilliant junior software developers."
 
         public override string Introduce()
         {
@@ -27,6 +24,11 @@ namespace Green_Fox_Organization
         public void Hire()
         {
             hiredStudents++;
+        }
+
+        public override string GetGoal()
+        {
+            return String.Format("Hire brilliant junior software developers");
         }
 
 
