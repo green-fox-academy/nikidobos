@@ -18,9 +18,6 @@ namespace Green_Fox_Organization
             students = new List<string>();
             mentors = new List<string>();
         }
-         //addStudent(Student) : adds the given Student to students list
-         //addMentor(Mentor): adds the given Mentor to mentors list
-         //info(): prints out "The name cohort has students.size() students and mentors.size() mentors."
 
         public void AddStudent(Student student)
         {
@@ -29,7 +26,7 @@ namespace Green_Fox_Organization
         
         public void AddMentor(Mentor mentor)
         {
-            mentors.Add(mentor)
+            mentors.Add(mentor);
         }
 
         public string Info()
