@@ -19,14 +19,10 @@ namespace AnimalZoo
             this.gender = gender;
         }
 
-        public void Greet()
+        public virtual string Greet()
         {
-
+            return "Hello, I'm an animal";
         }
 
-        public void WantChild()
-        {
-
-        }
     }
 }

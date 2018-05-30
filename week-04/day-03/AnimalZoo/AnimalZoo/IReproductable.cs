@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace AnimalZoo
 {
-    class Birds : Animal
+    public interface IReproductable
     {
-        protected Birds(string name, int age, string gender) : base(name, age, gender)
-        {
-        }
+        string WantChild();
     }
 }

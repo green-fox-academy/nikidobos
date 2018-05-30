@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace AnimalZoo
 {
-    class Mammal : Animal
+    class Mammal : Animal, IReproductable
     {
         protected Mammal(string name, int age, string gender) : base(name, age, gender)
         {
+
+        }
+
+        public string WantChild()
+        {
+            return "want a child from uterus!";
         }
     }
 }
