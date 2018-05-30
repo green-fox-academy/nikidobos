@@ -11,11 +11,11 @@ namespace AnimalZoo
         static void Main(string[] args)
         {
             Animal reptile = new Reptile("Crocodile", 21, "male");
-            Console.WriteLine(reptile.Greet(), reptile.WantChild());
+            Console.WriteLine(reptile.Name + ", " + reptile.WantChild());
             Animal mammal = new Mammal("Dog", 3, "female");
-            Console.WriteLine(mammal.WantChild());
+            Console.WriteLine(mammal.Name + ", " + mammal.WantChild());
             Animal bird = new Bird("Penguin", 2, "female");
-            Console.WriteLine(bird.Greet(), bird.WantChild());
+            Console.WriteLine(bird.Name + ", " + bird.WantChild());
             Console.ReadKey();
         }
     }

@@ -10,7 +10,7 @@ namespace AnimalZoo
     {
         public Reptile(string name, int age, string gender) : base(name, age, gender)
         {
-            
+
         }
 
         public override string WantChild()
