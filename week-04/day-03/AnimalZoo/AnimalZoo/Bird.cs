@@ -6,15 +6,22 @@ using System.Threading.Tasks;
 
 namespace AnimalZoo
 {
-    class Bird : Animal, IReproductable
+    class Bird : Animal
     {
-        protected Bird(string name, int age, string gender) : base(name, age, gender)
+        public Bird(string name, int age, string gender) : base(name, age, gender)
         {
+
         }
 
-        public string WantChild()
+        public override string WantChild()
         {
             return "want a child from an egg!";
         }
+
+        public string GetName()
+        {
+            return Name;
+        }
     }
 }
+

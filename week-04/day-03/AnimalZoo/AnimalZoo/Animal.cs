@@ -21,8 +21,37 @@ namespace AnimalZoo
 
         public virtual string Greet()
         {
-            return "Hello, I'm an animal";
+            return "Hello, I'm a " + name;
         }
 
+        public virtual string WantChild()
+        {
+            return "I want a child from an egg ";
+        }
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+        }
+
+        public string Gender
+        {
+            get
+            {
+                return gender;
+            }
+        }
     }
 }
+
