@@ -12,6 +12,10 @@ namespace _10___Fox
         string type;
         string color;
 
+        public Fox()
+        {
+        }
+
         public Fox(string name, string type, string color)
         {
             this.Name = name;
