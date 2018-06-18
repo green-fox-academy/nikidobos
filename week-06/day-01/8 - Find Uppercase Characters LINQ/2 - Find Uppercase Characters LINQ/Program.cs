@@ -20,9 +20,7 @@ namespace _2___Find_Uppercase_Characters_LINQ
                 Console.WriteLine(upperCaseLetters);
             }
 
-            IEnumerable<char> numberOfUpperChars = from c in toCheck
-                                                       where char.IsUpper(c)
-                                                       select c;
+            IEnumerable<char> numberOfUpperChars = toCheck.Where(d => char.IsUpper(d));
             Console.WriteLine("The uppercase letters in the word: ");
             foreach (var upperCaseLetters in numberOfUpperChars)
             {
