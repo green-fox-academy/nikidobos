@@ -39,6 +39,10 @@ namespace _10___Fox
                 x => Console.WriteLine("{0} is green and Pallida", x.Name)
                 );
 
+            IEnumerable<Fox> greenFoxNames = foxes.Where(greenfox => greenfox.Color.Equals("green"));
+
+            IEnumerable<Fox> greenPallidaFoxNames = foxes.Where(greenfox => greenfox.Color.Equals("green") && greenfox.Type.Equals("Pallida"));
+
             Console.ReadLine();
         }
     }
