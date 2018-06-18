@@ -31,13 +31,9 @@ namespace _10___Fox
             IEnumerable<Fox> greenPallidaFoxes = from fox in foxes
                                                  where fox.Color.Equals("green") && fox.Type.Equals("Pallida")
                                                  select fox;
-            greenFoxes.ToList().ForEach(
-                x => Console.WriteLine("{0} is green", x.Name)
-                );
+            greenFoxes.ToList().ForEach(x => Console.WriteLine("{0} is green", x.Name));
 
-            greenPallidaFoxes.ToList().ForEach(
-                x => Console.WriteLine("{0} is green and Pallida", x.Name)
-                );
+            greenPallidaFoxes.ToList().ForEach(x => Console.WriteLine("{0} is green and Pallida", x.Name));
 
             IEnumerable<Fox> greenFoxNames = foxes.Where(greenfox => greenfox.Color.Equals("green"));
 
