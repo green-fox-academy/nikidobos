@@ -21,7 +21,13 @@ namespace _4___Find_Number_Squared
                 Console.WriteLine(num);
             }
 
+            var value2 = n.Where(x => (x * x) > 20);
+            foreach (var item in value)
+            {
+                Console.WriteLine(item);
+            }
             Console.ReadLine();
         }
     }
 }
+
