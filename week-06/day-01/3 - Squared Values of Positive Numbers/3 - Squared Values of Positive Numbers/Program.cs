@@ -13,34 +13,28 @@ namespace _3___Squared_Values_of_Positive_Numbers
         {
             int[] n = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
 
-            var value = from number in n
-                                where number > 0
-                                select number;
+            IEnumerable<int> value = from number in n
+                                     where number > 0
+                                     select number;
             Console.WriteLine("The squared values of the poisitive numbers: ");
             foreach (var num in value)
             {
-                Console.WriteLine(num * num));
+                Console.WriteLine(num * num);
             }
 
-            IEnumerable squaredValue = n.Where(x => x > 0);
+            IEnumerable<int> squaredValue = n.Where(x => x > 0);
             Console.WriteLine("The squared values of the poisitive numbers: ");
             foreach (var item in squaredValue)
             {
-                GetSquare(squaredValue);
+                Console.WriteLine(GetSquare(item));
             }
-
             Console.ReadLine();
         }
 
-        public static void GetSquare (int[] toSquare)
+        public static int GetSquare(int toSquare)
         {
-            for (int i = 0; i < toSquare.Length; i++)
-            {
-                int value = toSquare[i] * toSquare[i];
-                Console.WriteLine(value);
-            }
+            int value = toSquare * toSquare;
+            return value;
         }
-
     }
-
 }
