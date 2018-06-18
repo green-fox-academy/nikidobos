@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3 - Squared Values of Positive Numbers", "3 - Squared Values of Positive Numbers\3 - Squared Values of Positive Numbers.csproj", "{9A596DDC-3EE3-49AE-95E8-F6E69A45FAAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A596DDC-3EE3-49AE-95E8-F6E69A45FAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A596DDC-3EE3-49AE-95E8-F6E69A45FAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A596DDC-3EE3-49AE-95E8-F6E69A45FAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A596DDC-3EE3-49AE-95E8-F6E69A45FAAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2C6AAD6-DC81-4EC7-9612-3660F2F18B19}
+	EndGlobalSection
+EndGlobal
