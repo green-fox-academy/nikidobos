@@ -11,7 +11,8 @@ namespace _10___Fox
         static void Main(string[] args)
         {
             //Create a Fox class with !3 properties(name, type, color)! Fill a list with at least !5 foxes!, 
-            //it's up to you how you name/create them! Write a LINQ Expression to !find the foxes with green color!!
+            //it's up to you how you name/create them! 
+            //Write a LINQ Expression to !find the foxes with green color!!
             //Write a LINQ Expression to !find the foxes with green color and fulvipes type!
 
             List<Fox> foxes = new List<Fox>
@@ -21,7 +22,21 @@ namespace _10___Fox
                 new Fox() { Name = "Peter Griffin", Type = "Wild", Color = "green" },
                 new Fox() { Name = "Brian", Type = "Wild", Color = "foxgray" },
                 new Fox() { Name = "Nathan", Type = "Fulvipes", Color = "brown" }
-            };                                    
+            };
+
+            IEnumerable<Fox> greenFoxes = from greenfox in foxes
+                                          where greenfox.Color.Equals("green")
+                                          select greenfox;
+
+            IEnumerable<Fox> greenPallidaFoxes = from fox in foxes
+                                                 where fox.Color.Equals("green") && fox.Type.Equals("Pallida")
+                                                 select fox;
+
+            foreach (var fox in greenPallidaFoxes)
+            {
+                Console.WriteLine("{0} is green and Pallida", fox.Name);
+            }
+            Console.ReadLine();
         }
     }
 }
