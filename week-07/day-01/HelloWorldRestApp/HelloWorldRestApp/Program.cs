@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Hello_World_REST_App
+namespace HelloWorldRestApp
 {
     public class Program
     {

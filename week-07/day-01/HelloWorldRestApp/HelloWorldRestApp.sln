@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hello World REST App", "Hello World REST App\Hello World REST App.csproj", "{C396E366-42A5-4EE1-A462-B90E6BA06819}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldRestApp", "HelloWorldRestApp\HelloWorldRestApp.csproj", "{504BE0F2-61F4-4233-92E4-0CDA4022E6F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C396E366-42A5-4EE1-A462-B90E6BA06819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C396E366-42A5-4EE1-A462-B90E6BA06819}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C396E366-42A5-4EE1-A462-B90E6BA06819}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C396E366-42A5-4EE1-A462-B90E6BA06819}.Release|Any CPU.Build.0 = Release|Any CPU
+		{504BE0F2-61F4-4233-92E4-0CDA4022E6F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{504BE0F2-61F4-4233-92E4-0CDA4022E6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{504BE0F2-61F4-4233-92E4-0CDA4022E6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{504BE0F2-61F4-4233-92E4-0CDA4022E6F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7C27D78F-3C63-4594-8B03-8FC16243F8D4}
+		SolutionGuid = {C186029B-4A1D-4CD7-8780-0F298B12257F}
 	EndGlobalSection
 EndGlobal

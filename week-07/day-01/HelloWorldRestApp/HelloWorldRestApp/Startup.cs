@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Hello_World_REST_App
+namespace HelloWorldRestApp
 {
     public class Startup
     {
@@ -15,6 +15,7 @@ namespace Hello_World_REST_App
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,6 +25,8 @@ namespace Hello_World_REST_App
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseMvcWithDefaultRoute();
 
             app.Run(async (context) =>
             {
