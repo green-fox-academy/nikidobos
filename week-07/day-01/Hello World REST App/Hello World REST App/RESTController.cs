@@ -11,9 +11,16 @@ namespace Hello_World_REST_App
     public class RESTController : Controller
     {
         // GET: /<controller>/
+        [Route("api")]
         public IActionResult Index()
         {
             return View();
+        }
+
+        [Route("greeting")]
+        public IActionResult Greeting()
+        {
+            return Content("Hello World!");
         }
     }
 }
