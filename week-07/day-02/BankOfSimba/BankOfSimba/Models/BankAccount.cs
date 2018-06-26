@@ -13,15 +13,13 @@ namespace BankOfSimba.Models
 
         public BankAccount(string name, int balance, string animalType)
         {
-
+            this.Name = name;
+            this.Balance = balance;
+            this.AnimalType = animalType;
         }
 
         public BankAccount()
         {
         }
-
-        
-
-
     }
 }

@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace BankOfSimba.ViewModels
 {
-    public class ViewModel
+    public class BankViewModel
     {
         public List<BankAccount> accounts { get; set; }
+
+        public BankViewModel()
+        {
+            accounts = new List<BankAccount>();
+        }
     }
 }
