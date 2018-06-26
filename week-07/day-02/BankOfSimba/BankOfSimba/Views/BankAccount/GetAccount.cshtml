@@ -1,20 +1,16 @@
-﻿@Model BankOfSimba.Models.BankAccount
+﻿@model BankOfSimba.ViewModells.BankViewModel
+
 @{
-    ViewData["Title"] = "BankAccount";
+    ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml>
-<head>
-    <title>BankAccount</title>
-</head>
-<body>
-    <h2>BankAccount</h2>
-    @{
-        <p>@Model.Name</p>
-        <p>@Model.Balance</p>
-        <p>@Model.AnimalType</p>
+
+@{
+    foreach (var item in Model.accounts)
+    {
+        <p>Name: @item.Name</p>
+        <p>Balance: @item.Balance </p>
+        <p>Type: @item.AnimalType </p>
     }
-</body>
-</html>
+}
 
