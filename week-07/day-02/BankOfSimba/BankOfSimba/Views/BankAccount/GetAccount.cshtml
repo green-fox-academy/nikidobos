@@ -1,0 +1,20 @@
+﻿@Model BankOfSimba.Models.BankAccount
+@{
+    ViewData["Title"] = "BankAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml>
+<head>
+    <title>BankAccount</title>
+</head>
+<body>
+    <h2>BankAccount</h2>
+    @{
+        <p>@Model.Name</p>
+        <p>@Model.Balance</p>
+        <p>@Model.AnimalType</p>
+    }
+</body>
+</html>
+

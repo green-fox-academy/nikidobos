@@ -18,8 +18,16 @@ namespace BankOfSimba.Controllers
         [Route("Simba")]
         public IActionResult GetAccount()
         {
-            BankAccount SimbasBankAccount = new BankAccount("Simba", 2000, "Animal.Lion");
+            BankAccount SimbasBankAccount = new BankAccount("Simba", 2000.ToString("0.##"), "Animal.Lion");
             return View(SimbasBankAccount);
+        }
+
+        List<BankAccount> accounts = new List<BankAccount>();
+        [Route("List")]
+        public IActionResult BankAccounts(BankAccount bankAccount)
+        {
+            accounts.Add(bankAccount);
+            return View(accounts);
         }
     }
 }
