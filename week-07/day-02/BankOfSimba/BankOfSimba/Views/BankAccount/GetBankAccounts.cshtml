@@ -8,5 +8,8 @@
 @foreach (var item in Model.accounts)
 {
     <p>@item.Name</p>
+    <p>@item.Balance.ToString("#.00 Zebra")</p>
+    <p>@item.AnimalType</p>
+
 }
 
