@@ -8,13 +8,8 @@ namespace Greet_Someone.Controllers
 {
     public class GreetController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         [HttpGet("/")]
-        public IActionResult GetForm()
+        public IActionResult Index()
         {
             return View();
         }
