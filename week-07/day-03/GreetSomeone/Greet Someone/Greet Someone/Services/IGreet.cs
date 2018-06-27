@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Greet Someone.Services
+namespace Greet_Someone.Services
 {
-    interface IGreet
+    public interface IGreet
     {
+        string Greet();
+        void SetName(string input);
     }
 }
