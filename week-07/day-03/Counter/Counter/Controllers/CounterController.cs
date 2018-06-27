@@ -16,19 +16,18 @@ namespace Counter.Controllers
             this.counterService = counterService;
         }
 
-        private int number = 0;
         [HttpGet]
         [Route("/")]
         public IActionResult Index()
         {
-            return View(number);
+            return View(counterService.GetNumber());
         }
 
         [HttpPost]
         [Route("/")]
         public IActionResult AddOneNumber()
         {
-            number++;
+            counterService.Increase();
             return RedirectToAction("Index");
         }
     }
