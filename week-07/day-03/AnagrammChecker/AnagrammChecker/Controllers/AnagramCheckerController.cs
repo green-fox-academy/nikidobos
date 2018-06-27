@@ -30,6 +30,13 @@ namespace AnagrammChecker.Controllers
         public IActionResult SetWords(string wordToCheck1, string wordToCheck2)
         {
             isAnagram.SetWords(wordToCheck1, wordToCheck2);
+
+            if (wordToCheck1.Length.Equals(wordToCheck2.Length))
+            {
+                char[] isAnagram = wordToCheck1.ToCharArray();
+                Array.Reverse(isAnagram);
+
+            }
             return Redirect("/result");
         }
 
