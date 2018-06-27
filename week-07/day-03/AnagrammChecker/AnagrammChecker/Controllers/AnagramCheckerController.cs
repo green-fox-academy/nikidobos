@@ -13,6 +13,7 @@ namespace AnagrammChecker.Controllers
             return View();
         }
 
+        [HttpGet("/")]
         public IActionResult GiveWords(string wordToCheck1, string wordToCheck2)
         {
             return View();
