@@ -12,5 +12,11 @@ namespace Greet_Someone.Controllers
         {
             return View();
         }
+
+        [HttpGet("/")]
+        public IActionResult GetForm()
+        {
+            return View();
+        }
     }
 }
