@@ -29,9 +29,15 @@ namespace AnagrammChecker.Controllers
         [HttpPost("/")]
         public IActionResult SetWords(string wordToCheck1, string wordToCheck2)
         {
-            return Redirect();
+            isAnagram.SetWords(wordToCheck1, wordToCheck2);
+            return Redirect("/result");
         }
 
+        [HttpGet("/result")]
+        public IActionResult isItAnagram()
+        {
+            return View(isAnagram);
+        }
 
     }
 }
