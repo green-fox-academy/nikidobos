@@ -7,14 +7,15 @@ namespace Counter.Services
 {
     public class CounterService : ICounter
     {
+        private int countOfClicks;
         public int GetNumber()
         {
-            throw new NotImplementedException();
+            return countOfClicks;
         }
 
         public void Increase()
         {
-            throw new NotImplementedException();
+            countOfClicks++;
         }
     }
 }
