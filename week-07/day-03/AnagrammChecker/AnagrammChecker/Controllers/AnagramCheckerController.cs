@@ -33,8 +33,8 @@ namespace AnagrammChecker.Controllers
 
             if (wordToCheck1.Length.Equals(wordToCheck2.Length))
             {
-                char[] isAnagram = wordToCheck1.ToCharArray();
-                Array.Reverse(isAnagram);
+                char[] toCheck = wordToCheck1.ToCharArray();
+                Array.Reverse(toCheck);
 
             }
             return Redirect("/result");
