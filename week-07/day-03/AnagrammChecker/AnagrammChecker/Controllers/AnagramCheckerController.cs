@@ -34,7 +34,7 @@ namespace AnagrammChecker.Controllers
         }
 
         [HttpGet("/result")]
-        public IActionResult isItAnagram()
+        public IActionResult IsItAnagram()
         {
             return View(isAnagram);
         }
