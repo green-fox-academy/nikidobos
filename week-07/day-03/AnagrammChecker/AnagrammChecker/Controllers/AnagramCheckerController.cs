@@ -27,7 +27,7 @@ namespace AnagrammChecker.Controllers
         }
 
         [HttpPost("/")]
-        public IActionResult SetWords(string wordToCheck1, string wordToCheck2)
+        public bool SetWords(string wordToCheck1, string wordToCheck2)
         {
             isAnagram.SetWords(wordToCheck1, wordToCheck2);
 
@@ -40,14 +40,14 @@ namespace AnagrammChecker.Controllers
 
                 if (toCheck == anotherToCheck)
                 {
-                    return Content("It's an anagram!");
+                    return true;
                 }
                 else
                 {
-                    return Content("It's not an anagram :(");
+                    return false;
                 }
             }
-            return Redirect("/result");
+
         }
 
         [HttpGet("/result")]
