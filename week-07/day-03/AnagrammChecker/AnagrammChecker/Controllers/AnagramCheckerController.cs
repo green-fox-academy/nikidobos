@@ -36,6 +36,16 @@ namespace AnagrammChecker.Controllers
                 char[] toCheck = wordToCheck1.ToCharArray();
                 Array.Reverse(toCheck);
 
+                char[] anotherToCheck = wordToCheck2.ToCharArray();
+
+                if (toCheck == anotherToCheck)
+                {
+                    return Content("It's an anagram!");
+                }
+                else
+                {
+                    return Content("It's not an anagram :(");
+                }
             }
             return Redirect("/result");
         }
