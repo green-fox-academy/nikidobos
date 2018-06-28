@@ -20,14 +20,8 @@ namespace AnagrammChecker.Controllers
             return View();
         }
 
-        [HttpGet("/")]
-        public IActionResult GiveWords()
-        {
-            return View();
-        }
-
         [HttpPost("/")]
-        public bool SetWords(string wordToCheck1, string wordToCheck2)
+        public IActionResult SetWords(string wordToCheck1, string wordToCheck2)
         {
             isAnagram.SetWords(wordToCheck1, wordToCheck2);
 
@@ -47,7 +41,7 @@ namespace AnagrammChecker.Controllers
                     return false;
                 }
             }
-
+            return Redirect("/result");
         }
 
         [HttpGet("/result")]

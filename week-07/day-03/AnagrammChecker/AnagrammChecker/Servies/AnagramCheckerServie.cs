@@ -9,9 +9,6 @@ namespace AnagrammChecker.Servies
     {
         private string wordToCheck1;
         private string wordToCheck2;
-        public void Givewords(string wordToCheck1, string wordToCheck2)
-        {
-        }
 
         public void SetWords(string input1, string input2)
         {
