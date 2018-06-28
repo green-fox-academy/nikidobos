@@ -16,14 +16,20 @@ namespace Club.Controllers
             return Redirect("/login");
         }
 
-        [HttpPost("/login")]
-        public IActionResult Login()
+        [HttpGet("/login")]
+        public IActionResult Login(string input)
         {
             return View();
         }
 
-        [HttpGet("/login")]
-        public IActionResult Login(string input)
+        [HttpPost("/login")]
+        public IActionResult Login()
+        {
+            return Redirect("/Info");
+        }
+
+        [HttpPost("/info")]
+        public IActionResult Info()
         {
             return View();
         }
