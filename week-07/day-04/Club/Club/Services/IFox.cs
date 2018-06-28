@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Club.Services
 {
-    interface IFox
+    public interface IFox
     {
         void Login(string input);
         void LearnTricks(string trick);

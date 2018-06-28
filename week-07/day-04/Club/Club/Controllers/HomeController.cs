@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Club.Models;
+using Club.Services;
 
 namespace Club.Controllers
 {
@@ -15,6 +16,11 @@ namespace Club.Controllers
         //{
         //    return Redirect("/login");
         //}
+        private IFox fox;
+        public HomeController(IFox fox)
+        {
+            this.fox = fox;
+        }
 
         [HttpGet("/")]
         public IActionResult Login()
