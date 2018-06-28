@@ -10,12 +10,17 @@ namespace Club.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        [HttpPost("/login")]
+        public IActionResult Login()
         {
             return View();
         }
 
-
+        [HttpGet("/login")]
+        public IActionResult Login(string input)
+        {
+            return View();
+        }
 
         public IActionResult Error()
         {
