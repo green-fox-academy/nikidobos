@@ -1,4 +1,5 @@
-﻿using Club.Services;
+﻿
+using Club.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Club.Models
 {
-    public class Fox : IFox
+    public class Fox
     {
         private string name;
 
@@ -20,17 +21,7 @@ namespace Club.Models
         public void FeedTheFox(string food)
         {
 
-        }
-
-        public string GetName()
-        {
-            return Name;
-        }
-
-        public void Login(string input)
-        {
-            this.Name = input;
-        }
+        }       
 
         public void TeachTricks(string trick)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Club.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,7 +13,21 @@ namespace Club.Services
         private List<string> foodStore;
         private List<string> drinkStore;
 
+        Fox myfox = new Fox();
+        public FoxService()
+        {
+            this.myfox = myfox;
+        }
 
+        public string GetName()
+        {
+            return name;
+        }
+
+        public void Login(string input)
+        {
+            this.name = input;
+        }
 
         public void TeachTricks(string trick)
         {
