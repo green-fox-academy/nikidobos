@@ -8,5 +8,6 @@ namespace AnagrammChecker.Servies
     public interface IAnagramChecker
     {
         void SetWords(string wordToCheck1, string wordToCheck2);
+        bool AngramCheck(string wordToCheck1, string wordToCheck2);
     }
 }

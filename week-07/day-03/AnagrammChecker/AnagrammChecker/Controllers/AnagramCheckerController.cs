@@ -14,7 +14,8 @@ namespace AnagrammChecker.Controllers
         {
             this.isAnagram = isAnagram;
         }
-        [HttpGet("/"]
+
+        [HttpGet("/")]
         public IActionResult Index()
         {
             return View();
@@ -23,32 +24,7 @@ namespace AnagrammChecker.Controllers
         [HttpPost("/")]
         public IActionResult SetWords(string wordToCheck1, string wordToCheck2)
         {
-            isAnagram.SetWords(wordToCheck1, wordToCheck2);
-
-            if (wordToCheck1.Length.Equals(wordToCheck2.Length))
-            {
-                char[] toCheck = wordToCheck1.ToCharArray();
-                Array.Reverse(toCheck);
-
-                char[] anotherToCheck = wordToCheck2.ToCharArray();
-
-                if (toCheck == anotherToCheck)
-                {
-                    return Content("It's an anagram!");
-                }
-                else
-                {
-                    return Content("It's not an anagram! :(");
-                }
-            }
-            return Redirect("/result");
+            return View(isAnagram.AngramCheck(wordToCheck1, wordToCheck2));
         }
-
-        [HttpGet("/result")]
-        public IActionResult IsItAnagram()
-        {
-            return View(isAnagram);
-        }
-
     }
 }

@@ -15,5 +15,20 @@ namespace AnagrammChecker.Servies
             this.wordToCheck1 = input1;
             this.wordToCheck2 = input2;
         }
+
+        public bool AngramCheck(string wordToCheck1, string wordToCheck2)
+        {
+            string toCheck = string.Concat(wordToCheck1.OrderBy(x => x));
+            string anotherToCheck = string.Concat(wordToCheck2.OrderBy(x => x));
+
+            if (toCheck == anotherToCheck)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
