@@ -7,6 +7,6 @@ namespace AnagrammChecker.Servies
 {
     public interface IAnagramChecker
     {
-        void SetWords(string input1, string input2);
+        void SetWords(string wordToCheck1, string wordToCheck2);
     }
 }

@@ -14,7 +14,7 @@ namespace AnagrammChecker.Controllers
         {
             this.isAnagram = isAnagram;
         }
-
+        [HttpGet("/"]
         public IActionResult Index()
         {
             return View();
@@ -34,11 +34,11 @@ namespace AnagrammChecker.Controllers
 
                 if (toCheck == anotherToCheck)
                 {
-                    return true;
+                    return Content("It's an anagram!");
                 }
                 else
                 {
-                    return false;
+                    return Content("It's not an anagram! :(");
                 }
             }
             return Redirect("/result");
