@@ -10,26 +10,26 @@ namespace Club.Controllers
 {
     public class HomeController : Controller
     {
-        [HttpGet("")]
-        public IActionResult Index()
-        {
-            return Redirect("/login");
-        }
+        //[HttpGet("")]
+        //public IActionResult Index()
+        //{
+        //    return Redirect("/login");
+        //}
 
-        [HttpGet("/login")]
+        [HttpGet("/")]
         public IActionResult Login()
         {
             return View();
         }
 
-        [HttpPost("/login")]
+        [HttpPost("/")]
         public IActionResult Login(string input)
         {
             return Redirect("/info");
         }
-
-        [HttpGet("/info")]
-        public IActionResult Info()
+        [HttpGet]
+        [Route("/info")]
+        public IActionResult Info(string input)
         {
             return View();
         }
