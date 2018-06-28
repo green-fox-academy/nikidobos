@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace Club.Services
 {
-    interface IOrc
+    interface IFox
     {
+
     }
 }

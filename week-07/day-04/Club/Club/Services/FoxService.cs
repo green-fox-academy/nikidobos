@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace Club.Services
 {
-    public class OrcService
+    public class FoxService
     {
+
     }
 }
