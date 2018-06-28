@@ -12,23 +12,23 @@ namespace Club.Services
         private List<string> foodStore;
         private List<string> drinkStore;
 
-        public void Login(string input)
-        {
-            this.name = input;
-        }
 
-        public void LearnTricks(string trick)
+
+        public void TeachTricks(string trick)
         {
+            List<string> learnttricks = new List<string>();
             learnttricks.Add(trick);
         }
 
         public void FeedTheFox(string food)
         {
+            List<string> foodStore = new List<string>();
             foodStore.Add(food);
         }
 
         public void DrinkTheFox(string drink)
         {
+            List<string> drinkStore = new List<string>();
             drinkStore.Add(drink);
         }
     }

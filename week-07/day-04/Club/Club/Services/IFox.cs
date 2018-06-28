@@ -7,8 +7,8 @@ namespace Club.Services
 {
     public interface IFox
     {
-        void Login(string input);
-        void LearnTricks(string trick);
-        void FeedTheFox(string food, string drink);
+        void TeachTricks(string trick);
+        void FeedTheFox(string food);
+        void DrinkTheFox(string drink);
     }
 }
