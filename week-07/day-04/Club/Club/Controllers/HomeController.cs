@@ -31,10 +31,10 @@ namespace Club.Controllers
         [HttpPost("/")]
         public IActionResult Login(string input)
         {
+            fox.Login(input);
             return Redirect("/info");
         }
-        [HttpGet]
-        [Route("/info")]
+        [HttpGet("/info")]
         public IActionResult Info(string input)
         {
             return View();

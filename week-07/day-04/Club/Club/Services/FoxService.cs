@@ -22,9 +22,13 @@ namespace Club.Services
             learnttricks.Add(trick);
         }
 
-        public void FeedTheFox(string food, string drink)
+        public void FeedTheFox(string food)
         {
             foodStore.Add(food);
+        }
+
+        public void DrinkTheFox(string drink)
+        {
             drinkStore.Add(drink);
         }
     }
