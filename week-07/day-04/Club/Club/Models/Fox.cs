@@ -10,7 +10,7 @@ namespace Club.Models
     public class Fox
     {
         public string Name { get; set; }
-        public List<string> Food { get; set; }
-        public List<string> Tricks { get; set; }
+        public string Food { get; set; }
+        public string Tricks { get; set; }
     }
 }

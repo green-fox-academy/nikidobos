@@ -41,6 +41,12 @@ namespace Club.Controllers
             return View(fox);
         }
 
+        [HttpPost("/nutritionstore")]
+        public IActionResult NutritionStore (string input)
+        {
+            fox.AddFox(input);
+            return View();
+        }
 
         public IActionResult Error()
         {
