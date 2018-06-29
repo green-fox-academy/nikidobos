@@ -7,5 +7,6 @@ namespace Club.Models
 {
     public class FoodDrink
     {
+        List<string> foodStore = new List<string>() { "cheese", "pizza", "salad", "carrot" };      
     }
 }
