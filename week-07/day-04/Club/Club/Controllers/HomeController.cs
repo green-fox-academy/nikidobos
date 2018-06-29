@@ -16,8 +16,8 @@ namespace Club.Controllers
         //{
         //    return Redirect("/login");
         //}
-        private Fox fox;
-        public HomeController(Fox fox)
+        private IFox fox;
+        public HomeController(IFox fox)
         {
             this.fox = fox;
         }
@@ -31,15 +31,16 @@ namespace Club.Controllers
         [HttpPost("/")]
         public IActionResult Login(string input)
         {
-            fox.Login(input);
-            return Redirect("/info");
+            fox.AddFox(input);
+            return RedirectToAction("Info", input);
         }
+
         [HttpGet("/info")]
         public IActionResult Info(string input)
         {
-            fox.Login(input);
             return View(fox);
         }
+
 
         public IActionResult Error()
         {

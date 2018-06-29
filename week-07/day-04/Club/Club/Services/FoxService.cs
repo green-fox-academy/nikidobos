@@ -8,43 +8,35 @@ namespace Club.Services
 {
     public class FoxService : IFox
     {
-        private string name;
+        private List<Fox> foxes;
         private List<string> learnttricks;
         private List<string> foodStore;
-        private List<string> drinkStore;
 
-        Fox myfox = new Fox();
         public FoxService()
         {
-            this.myfox = myfox;
+            foxes = new List<Fox>();
         }
 
-        public string GetName()
+        public void AddFox(string name)
         {
-            return name;
+            Fox fox = new Fox();
+            fox.Name = name;
+            foxes.Add(fox);
         }
 
-        public void Login(string input)
+        public Fox GetFox(string name)
         {
-            this.name = input;
+            return foxes.Where(f => f.Name == name).Single();
         }
 
-        public void TeachTricks(string trick)
+        public string FeedTheFox()
         {
-            List<string> learnttricks = new List<string>();
-            learnttricks.Add(trick);
+            throw new NotImplementedException();
         }
 
-        public void FeedTheFox(string food)
+        public string TeachTricks()
         {
-            List<string> foodStore = new List<string>();
-            foodStore.Add(food);
-        }
-
-        public void DrinkTheFox(string drink)
-        {
-            List<string> drinkStore = new List<string>();
-            drinkStore.Add(drink);
+            throw new NotImplementedException();
         }
     }
 }
