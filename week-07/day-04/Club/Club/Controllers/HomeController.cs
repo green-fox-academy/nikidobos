@@ -38,13 +38,12 @@ namespace Club.Controllers
         [HttpGet("/info")]
         public IActionResult Info(string input)
         {
-            return View(fox);
+            return View(fox.GetFox(input));
         }
 
         [HttpPost("/nutritionstore")]
         public IActionResult NutritionStore (string input)
         {
-            fox.AddFox(input);
             return View();
         }
 
