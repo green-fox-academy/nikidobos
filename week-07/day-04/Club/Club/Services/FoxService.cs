@@ -8,6 +8,8 @@ namespace Club.Services
 {
     public class FoxService : IFox
     {
+        Fox fox = new Fox();
+        private FoodDrink menu;
         private List<Fox> foxes;
         private List<string> learnttricks;
         private List<string> foodStore;
@@ -19,7 +21,6 @@ namespace Club.Services
 
         public void AddFox(string name)
         {
-            Fox fox = new Fox();
             fox.Name = name;
             foxes.Add(fox);
         }
@@ -31,7 +32,7 @@ namespace Club.Services
 
         public string FeedTheFox()
         {
-            throw new NotImplementedException();
+            return menu.foodStore[0];
         }
 
         public string TeachTricks()
