@@ -9,6 +9,7 @@
     <table style="padding:7px">
         <thead>
             <tr>
+                <th>Index</th>
                 <th>Name</th>
                 <th>Balance</th>
                 <th>Type</th>
@@ -19,6 +20,7 @@
                 {
                     {
                         <tr>
+                            <td style="border:1px solid black; padding: 8px">@(i+1)</td>
                             <td style="border:1px solid black; padding: 8px">@Model.accounts[i].Name</td>
                             <td style="border:1px solid black; padding: 8px">@Model.accounts[i].Balance</td>
                             <td style="border:1px solid black; padding: 8px">@Model.accounts[i].AnimalType</td>
