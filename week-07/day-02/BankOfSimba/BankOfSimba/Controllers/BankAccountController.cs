@@ -10,6 +10,8 @@ namespace BankOfSimba.Controllers
 {
     public class BankAccountController : Controller
     {
+        BankViewModel viewModel = new BankViewModel();
+
         public IActionResult Index()
         {
             return View();
@@ -18,14 +20,12 @@ namespace BankOfSimba.Controllers
         [Route("simba")]
         public IActionResult GetAccount()
         {
-            BankAccount SimbasBankAccount = new BankAccount("Simba", 2000, "Lion");
-            return View(SimbasBankAccount);
+            return View(viewModel.accounts[0]);
         }
 
         [Route("accounts")]
         public IActionResult GetBankAccounts()
         {
-            BankViewModel viewModel = new BankViewModel();
             return View(viewModel);
         }
     }
