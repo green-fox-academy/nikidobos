@@ -18,6 +18,8 @@ namespace BankOfSimba.ViewModels
             accounts.Add(new BankAccount("Timon", 500, "Meerkat", false));
             accounts.Add(new BankAccount("Mufasa", 2000, "Lion", false));
             accounts.Add(new BankAccount("Zazu", 3000, "Bird", false));
+
         }
     }
 }
+
