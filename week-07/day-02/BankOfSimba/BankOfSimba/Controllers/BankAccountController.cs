@@ -25,12 +25,8 @@ namespace BankOfSimba.Controllers
         [Route("accounts")]
         public IActionResult GetBankAccounts()
         {
-            BankViewModel model = new BankViewModel();
-            model.accounts.Add(new BankAccount("Nala", 3000, "Lion"));
-            model.accounts.Add(new BankAccount("Timon", 500, "Meerkat"));
-            model.accounts.Add(new BankAccount("Mufasa", 2000, "Lion"));
-            model.accounts.Add(new BankAccount("Zazu", 3000, "Bird"));
-            return View(model);
+            BankViewModel viewModel = new BankViewModel();
+            return View(viewModel);
         }
     }
 }

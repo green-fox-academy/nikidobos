@@ -13,6 +13,10 @@ namespace BankOfSimba.ViewModels
         public BankViewModel()
         {
             accounts = new List<BankAccount>();
+            accounts.Add(new BankAccount("Nala", 3000, "Lion"));
+            accounts.Add(new BankAccount("Timon", 500, "Meerkat"));
+            accounts.Add(new BankAccount("Mufasa", 2000, "Lion"));
+            accounts.Add(new BankAccount("Zazu", 3000, "Bird"));
         }
     }
 }
