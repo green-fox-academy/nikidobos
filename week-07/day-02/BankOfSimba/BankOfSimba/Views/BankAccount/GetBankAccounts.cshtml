@@ -3,7 +3,7 @@
     ViewData["Title"] = "GetBankAccounts";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>GetBankAccounts</h2>
+<h2>Bank Accounts</h2>
 
 <body>
     <table style="padding:7px">
@@ -13,7 +13,9 @@
                 <th>Name</th>
                 <th>Balance</th>
                 <th>Type</th>
-                <th>King</th>           
+                <th>King</th>
+                <th>Good/Bad</th>
+
             </tr>
         </thead>
         <tbody style="font-size: 16px">
@@ -26,16 +28,27 @@
                         <td style="border:1px solid black; padding: 8px">@Model.accounts[i].AnimalType</td>
                         @if (Model.accounts[i].IsKing)
                         {
-                            <td style="border:1px solid black; padding: 8px">King</td>
+                            <td style="border:1px solid black; color: brown;  padding: 8px"><b>King</b></td>
                         }
                         else
                         {
                             <td style="border:1px solid black; padding: 8px"> not a King</td>
                         }
 
+                        @switch (Model.accounts[i].IsGood)
+                        {
+                            case false:
+                                <td style="border:1px solid black; padding: 8px"> Bad Guy</td>
+                                break;
+                            default:
+                                <td style="border:1px solid black; padding: 8px"> Good Guy </td>
+                                break;
+
+                        }
                     </tr>
                 }
             }
         </tbody>
     </table>
+    <img src="~/images/simba.jpg" />
 </body>
