@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace PokerDojo
 {
-    class Poker
+    public class Poker
     {
+        string[] blackCards = { "2H", "3D", "5S", "9C", "KD" };
+        string[] whiteCards = { "2C", "3H", "4S", "8C", "AH" };
+
+        public static int GetValue(string input)
+        {
+            int parsed = Int32.Parse(input);
+            return parsed;
+        }
+
     }
 }
