@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,5 +44,16 @@ namespace PokerDojo
                 return 0;
             }
         }
+
+        public static int GetSumOfCards(string[] cards)
+        {
+            int sum = 0;
+            for (int i = 0; i < cards.Length; i++)
+            {
+                sum += Int32.Parse(cards[i][0].ToString());
+            }
+            return sum;
+        }
     }
 }
+
