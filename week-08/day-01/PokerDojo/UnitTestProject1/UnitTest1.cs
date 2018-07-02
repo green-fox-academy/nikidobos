@@ -35,5 +35,12 @@ namespace UnitTestProject1
             int parsed = Poker.GetValue(input);
             NUnit.Framework.Assert.AreEqual(13, parsed);
         }
+
+        [TestCase("A")]
+        public void IfCardIsAceReturnFourteen(string input)
+        {
+            int parsed = Poker.GetValue(input);
+            NUnit.Framework.Assert.AreEqual(14, parsed);
+        }
     }
 }
