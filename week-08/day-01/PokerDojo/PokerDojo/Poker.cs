@@ -15,7 +15,7 @@ namespace PokerDojo
         {
             try
             {
-                int parsed = Int32.Parse(input.ToString());
+                int parsed = Int32.Parse(input[0].ToString());
                 return parsed;
             }
             catch (Exception)
