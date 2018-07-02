@@ -13,9 +13,35 @@ namespace PokerDojo
 
         public static int GetValue(string input)
         {
-            int parsed = Int32.Parse(input);
-            return parsed;
-        }
+            try
+            {
+                int parsed = Int32.Parse(input.ToString());
+                return parsed;
+            }
+            catch (Exception)
+            {
 
+                if (input == "J")
+                {
+                    return 11;
+                }
+
+                else if (input == "Q")
+                {
+                    return 12;
+                }
+
+                else if (input == "K")
+                {
+                    return 13;
+                }
+
+                else if (input == "A")
+                {
+                    return 14;
+                }
+                return 0;
+            }
+        }
     }
 }
