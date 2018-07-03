@@ -10,9 +10,5 @@ namespace List_Todos.Repositories
     public class TodoDbContext : DbContext
     {
         public DbSet<Todo> todos { get; set; }
-        public TodoDbContext(DbContextOptions<TodoDbContext> options) : base(options)
-        {
-
-        }
     }
 }
