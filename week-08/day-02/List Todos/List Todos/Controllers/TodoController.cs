@@ -18,7 +18,7 @@ namespace List_Todos.Controllers
         [HttpGet("/list")]
         public IActionResult List()
         {
-            return Content("This is my first todo");
+            return View();
         }
     }
 }
