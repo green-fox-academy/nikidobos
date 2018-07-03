@@ -24,9 +24,9 @@ namespace List_Todos.Controllers
 
         [HttpGet("/")]
         [HttpGet("/list")]
-        public IActionResult List(Todo todo)
+        public IActionResult List(bool isDone, Todo todo)
         {
-            return View(todoRepository.ListAllTodos());
+            return View(todoRepository.ListAllTodos(isDone, todo));
         }
 
         [HttpGet("/add")]
