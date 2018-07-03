@@ -11,11 +11,11 @@ namespace List_Todos.Controllers
     {
         public IActionResult Index()
         {
-            return RedirectToAction("List");
+            return View();
         }
 
         [HttpGet("/")]
-        [HttpGet("list")]
+        [HttpGet("/list")]
         public IActionResult List()
         {
             return Content("This is my first todo");
