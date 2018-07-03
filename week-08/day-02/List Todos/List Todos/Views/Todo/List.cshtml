@@ -2,7 +2,12 @@
 @model List<Todo>
 
 <h2>Todos for today</h2>
-<table style="width:50%; height:300px; font-size: large">
+<form action="/todos/Addtodos" method="post">
+    Todo:
+    <input type="text" name="name" value="Todo" />
+    <button type="submit">Submit</button>
+</form>
+
     <tr style="background-color:white">
         <th>ID</th>
         <th>ACTION</th>
