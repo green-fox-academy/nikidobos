@@ -23,10 +23,11 @@ namespace List_Todos
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = todos; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"
+            string connectionString = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = todos; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
             services.AddMvc();
             services.AddDbContext<TodoDbContext>(options => options.UseSqlServer(connectionString));
             services.AddTransient<TodoDbContext>();
+            services.AddTransient<TodoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

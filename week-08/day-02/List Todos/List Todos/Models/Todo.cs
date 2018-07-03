@@ -7,9 +7,9 @@ namespace List_Todos.Models
 {
     public class Todo
     {
-        private long Id { set; get; }
-        private string Title { set; get; }
-        private bool IsUrgent { set; get; }
-        private bool IsDone { set; get; }
+        public long Id { set; get; }
+        public string Title { set; get; }
+        public bool IsUrgent { set; get; }
+        public bool IsDone { set; get; }
     }
 }
