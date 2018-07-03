@@ -21,7 +21,10 @@ namespace List_Todos.Repositories
 
         public List<Todo> AddNewTodo(Todo todo)
         {
-            todoDbContext.Todos.Add(todo);
+            if (todoDbContext.Todos != null)
+            {
+                todoDbContext.Todos.Add(todo);
+            }
             todoDbContext.SaveChanges();
             return todoDbContext.Todos.ToList();
         }

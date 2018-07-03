@@ -30,11 +30,16 @@ namespace List_Todos.Controllers
         }
 
         [HttpGet("/add")]
+        public IActionResult AddTodo()
+        {
+            return View();
+        }
+
         [HttpPost("/add")]
         public IActionResult AddTodo(Todo todo)
         {
             todoRepository.AddNewTodo(todo);
-            return View(todoRepository.ListAllTodos());
+            return Redirect("list");
         }
     }
 }
