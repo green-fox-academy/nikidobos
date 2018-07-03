@@ -4,7 +4,7 @@
 <h2>Todos for today</h2>
 
 <table>
-    <tr style="background-color:white">
+    <tr>
         <th>ID</th>
         <th>ACTION</th>
         <th>URGENT</th>
@@ -13,10 +13,10 @@
     @foreach (var todo in Model)
     {
         <tr>
-            <td style="border:1px solid">@todo.Id</td>
-            <td style="border:1px solid">@todo.Title</td>
-            <td style="border:1px solid">@todo.IsUrgent</td>
-            <td style="border:1px solid">@todo.IsDone</td>
+            <td style="border:1px solid; padding: 3px;">@todo.Id</td>
+            <td style="border:1px solid; padding: 3px;">@todo.Title</td>
+            <td style="border:1px solid; padding: 3px;">@todo.IsUrgent</td>
+            <td style="border:1px solid; padding: 3px;">@todo.IsDone</td>
         </tr>
     }
 </table>

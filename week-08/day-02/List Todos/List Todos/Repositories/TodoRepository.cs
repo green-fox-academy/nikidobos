@@ -28,5 +28,12 @@ namespace List_Todos.Repositories
             todoDbContext.SaveChanges();
             return todoDbContext.Todos.ToList();
         }
+
+        public IEnumerable<Todo> isItActive ()
+        {
+            var isActive = todoDbContext.Todos.ToList()
+               .Where(x => x.IsDone.Equals(true));
+            return isActive;
+        }
     }
 }
