@@ -19,10 +19,11 @@ namespace List_Todos.Repositories
             return todoDbContext.Todos.ToList();
         }
 
-        public void AddNewTodo(Todo todo)
+        public List<Todo> AddNewTodo(Todo todo)
         {
             todoDbContext.Todos.Add(todo);
             todoDbContext.SaveChanges();
+            return todoDbContext.Todos.ToList();
         }
     }
 }

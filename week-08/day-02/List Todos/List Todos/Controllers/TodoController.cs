@@ -28,5 +28,13 @@ namespace List_Todos.Controllers
         {
             return View(todoRepository.ListAllTodos());
         }
+
+        [HttpGet("/add")]
+        [HttpPost("/add")]
+        public IActionResult AddTodo(Todo todo)
+        {
+            todoRepository.AddNewTodo(todo);
+            return View(todoRepository.ListAllTodos());
+        }
     }
 }
