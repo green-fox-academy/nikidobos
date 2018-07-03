@@ -6,14 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace List_Todos.Controllers
 {
+    [Route("/todo")]
     public class TodoController : Controller
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("List");
         }
 
         [HttpGet("/")]
+        [HttpGet("list")]
         public IActionResult List()
         {
             return Content("This is my first todo");
