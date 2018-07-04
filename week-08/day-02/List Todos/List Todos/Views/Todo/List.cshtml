@@ -10,14 +10,16 @@
         <th>ACTION</th>
         <th>URGENT</th>
         <th>DONE</th>
+        <th>DELETE</th>
     </tr>
     @foreach (var todo in Model)
     {
-        <tr>
-            <td style="border:1px solid; padding: 3px;">@todo.Id</td>
-            <td style="border:1px solid; padding: 3px;">@todo.Title</td>
-            <td style="border:1px solid; padding: 3px;">@todo.IsUrgent</td>
-            <td style="border:1px solid; padding: 3px;">@todo.IsDone</td>
-        </tr>
+    <tr>
+        <td style="border:1px solid; padding: 3px;">@todo.Id</td>
+        <td style="border:1px solid; padding: 3px;">@todo.Title</td>
+        <td style="border:1px solid; padding: 3px;">@todo.IsUrgent</td>
+        <td style="border:1px solid; padding: 3px;">@todo.IsDone</td>
+        <td style="border:1px solid; padding: 3px;"> </td>
+    </tr>
     }
 </table>

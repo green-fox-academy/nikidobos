@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace List_Todos.Controllers
 {
-    //[Route("/todo")]
+    [Route("/todo")]
     public class TodoController : Controller
     {
         private TodoRepository todoRepository;
