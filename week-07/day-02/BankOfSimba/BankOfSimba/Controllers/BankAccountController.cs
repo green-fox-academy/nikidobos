@@ -11,10 +11,11 @@ namespace BankOfSimba.Controllers
     public class BankAccountController : Controller
     {
         BankViewModel viewModel = new BankViewModel();
-
+        
+        [HttpGet("")]
         public IActionResult Index()
         {
-            return View();
+            return Redirect("/accounts");
         }
 
         [Route("simba")]
