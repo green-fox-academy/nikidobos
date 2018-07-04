@@ -1,0 +1,24 @@
+﻿@model Todo
+@{
+    ViewData["Title"] = "UpdateTodo";
+}
+
+<h2>EditTodo</h2>
+
+<form action="./edit" method="post">
+    <div>
+        <label>Todo Description</label>
+        <input type="text" name="Title" value="@Model.Title"/>
+    </div>
+    <div>
+        <label>Is it urgent?</label>
+        <input name="IsUrgent" type="checkbox" value="@Model.IsUrgent" />
+    </div>
+    <div>
+        <label>Is it done?</label>
+        <input name="IsDone" type="checkbox" value="@Model.IsDone" />
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>

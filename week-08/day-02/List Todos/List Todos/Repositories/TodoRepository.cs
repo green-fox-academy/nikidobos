@@ -33,12 +33,30 @@ namespace List_Todos.Repositories
 
         public void RemoveTodo(long idToRemove)
         {
-            var removable = todoDbContext.Todos.ToList().FirstOrDefault(x => x.Id.Equals(idToRemove));
+            var removable = GetTodoById(idToRemove);
             if (removable != null)
             {
                 todoDbContext.Remove(removable);
+                todoDbContext.SaveChanges();
             }
-            todoDbContext.SaveChanges();
+        }
+
+        public void EditTodo(long idToEdit, Todo todo)
+        {
+            var toEdit = GetTodoById(idToEdit);
+            if (toEdit != null)
+            {
+                toEdit.Title = todo.Title;
+                toEdit.IsUrgent = todo.IsUrgent;
+                toEdit.IsDone = todo.IsDone;
+                todoDbContext.SaveChanges();
+            }
+        }
+
+        public Todo GetTodoById(long idToFind)
+        {
+            var selectedTodoById = todoDbContext.Todos.ToList().FirstOrDefault(x => x.Id.Equals(idToFind));
+            return selectedTodoById;
         }
     }
 }

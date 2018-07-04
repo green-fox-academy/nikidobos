@@ -50,9 +50,16 @@ namespace List_Todos.Controllers
         }
 
         [HttpGet("/{id}/edit")]
-        public IActionResult EditTodo()
+        public IActionResult UpdateTodo(long id)
+        {            
+            return View(todoRepository.GetTodoById(id));
+        }
+
+        [HttpPost("/{id}/edit")]
+        public IActionResult UpdateTodo(long id, Todo todo)
         {
-            return View();
+            todoRepository.EditTodo(id, todo);
+            return Redirect("/list");
         }
     }
 }
