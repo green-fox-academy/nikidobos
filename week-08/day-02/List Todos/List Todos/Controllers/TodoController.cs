@@ -43,10 +43,10 @@ namespace List_Todos.Controllers
         }
 
         [HttpGet("/{id}/delete")]
-        public IActionResult Delete(Todo todo, long id)
+        public IActionResult Delete(long id)
         {
-            todoRepository.RemoveTodo(todo, id);
-            return Redirect("list");
+            todoRepository.RemoveTodo(id);
+            return Redirect("/list");
         }
     }
 }

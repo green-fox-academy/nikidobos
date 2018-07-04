@@ -31,10 +31,13 @@ namespace List_Todos.Repositories
             return todoDbContext.Todos.ToList();
         }
 
-        public void RemoveTodo(Todo todo, long idToRemove)
+        public void RemoveTodo(long idToRemove)
         {
-            var removable = todoDbContext.Todos.Where(x => x.Id.Equals(idToRemove));
-            todoDbContext.Remove(removable);
+            var removable = todoDbContext.Todos.ToList().FirstOrDefault(x => x.Id.Equals(idToRemove));
+            if (removable != null)
+            {
+                todoDbContext.Remove(removable);
+            }
             todoDbContext.SaveChanges();
         }
     }
