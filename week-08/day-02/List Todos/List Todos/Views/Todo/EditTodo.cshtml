@@ -1,0 +1,27 @@
+﻿@model List<Todo>
+@{
+    ViewData["Title"] = "EditTodo";
+}
+
+<h2>EditTodo</h2>
+
+<form action="/edittodo" method="post">
+    <div>
+        <label for="name">Todo Description</label>
+        <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <input checked="checked"
+               id="isUrgent"
+               name="isUrgent"
+               type="checkbox"
+               value="true" />
+    </div>
+    <div>
+        <input checked="checked"
+               id="isDone"
+               name="isDone"
+               type="checkbox"
+               value="true" />
+    </div>
+</form>
