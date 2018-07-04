@@ -10,7 +10,7 @@
     <table class="container-fluid" ; style="padding:7px; ">
         <thead>
             <tr class="table-success">
-                <th class="table-light">#</th>
+                <th class="table-light">#ID</th>
                 <th>Name</th>
                 <th>Balance $</th>
                 <th>Type</th>
@@ -51,8 +51,8 @@
         </tbody>
     </table>
     <br />
-    <p>Increase the balance! Choose the # of the bankaccount's owner</p>
-    <form  name="index" action="/accounts" method="post">
+    <p style="text-align:center">Increase the balance! Choose the ID# of the bankaccount's owner</p>
+    <form  style="text-align:center "name="index" action="/accounts" method="post">
         <select name="index">
             @for (var i = 0; i < Model.Accounts.Count; i++)
             {
