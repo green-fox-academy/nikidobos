@@ -3,31 +3,30 @@
     ViewData["Title"] = "GetBankAccounts";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Bank Accounts</h2>
+<h1 style="text-align:center">Bank Of Simba</h1>
+<p style="text-align:center"><img src="~/images/simba.jpg" alt="Simba" width="400" /></p>
 
 <body>
-    <table class="container-fluid"; style="padding:7px; ">
+    <table class="container-fluid" ; style="padding:7px; ">
         <thead>
             <tr class="table-success">
-
-                <th class="table-light">Index</th>
+                <th class="table-light">#</th>
                 <th>Name</th>
-                <th>Balance</th>
+                <th>Balance $</th>
                 <th>Type</th>
                 <th>King</th>
                 <th>Good/Bad</th>
-
             </tr>
         </thead>
         <tbody style="font-size: 16px">
-            @{ for (int i = 0; i < @Model.accounts.Count; i++)
+            @{ for (int i = 0; i < @Model.Accounts.Count; i++)
                 {
                     <tr>
                         <td style="padding: 8px">@(i + 1)</td>
-                        <td style="padding: 8px">@Model.accounts[i].Name</td>
-                        <td style="padding: 8px">@Model.accounts[i].Balance</td>
-                        <td style="padding: 8px">@Model.accounts[i].AnimalType</td>
-                        @if (Model.accounts[i].IsKing)
+                        <td style="padding: 8px">@Model.Accounts[i].Name</td>
+                        <td style="padding: 8px">@Model.Accounts[i].Balance</td>
+                        <td style="padding: 8px">@Model.Accounts[i].AnimalType</td>
+                        @if (Model.Accounts[i].IsKing)
                         {
                             <td style="color: brown;  padding: 8px"><b>King</b></td>
                         }
@@ -36,7 +35,7 @@
                             <td style="padding: 8px"> not a King</td>
                         }
 
-                        @switch (Model.accounts[i].IsGood)
+                        @switch (Model.Accounts[i].IsGood)
                         {
                             case false:
                                 <td style="padding: 8px"> Bad Guy</td>
@@ -51,4 +50,16 @@
             }
         </tbody>
     </table>
+    <br />
+    <p>Increase the balance! Choose the # of the bankaccount's owner</p>
+    <form  name="index" action="/accounts" method="post">
+        <select name="index">
+            @for (var i = 0; i < Model.Accounts.Count; i++)
+            {
+                <option type="number" value="@i">@(i + 1)</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-success">Add $</button>
+    </form>
 </body>
+

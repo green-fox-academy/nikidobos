@@ -10,7 +10,7 @@ namespace BankOfSimba.Controllers
 {
     public class BankAccountController : Controller
     {
-        BankViewModel viewModel = new BankViewModel();
+        public static BankViewModel viewModel = new BankViewModel();
         
         [HttpGet("")]
         public IActionResult Index()
@@ -21,13 +21,20 @@ namespace BankOfSimba.Controllers
         [Route("simba")]
         public IActionResult GetAccount()
         {
-            return View(viewModel.accounts[0]);
+            return View(viewModel.Accounts[0]);
         }
 
         [Route("accounts")]
         public IActionResult GetBankAccounts()
         {
             return View(viewModel);
+        }
+
+        [HttpPost("accounts")]
+        public IActionResult AddCurrency(int index)
+        {
+            viewModel.Accounts[index].AddMoney();
+            return RedirectToAction("GetBankAccounts");
         }
     }
 }

@@ -25,5 +25,17 @@ namespace BankOfSimba.Models
         public BankAccount()
         {
         }
+
+        public void AddMoney()
+        {
+            if (IsKing)
+            {
+                Balance += 100;
+            }
+            else
+            {
+                Balance += 10;
+            }
+        }
     }
 }
