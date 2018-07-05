@@ -34,11 +34,8 @@ namespace List_Todos.Repositories
         public void RemoveTodo(long idToRemove)
         {
             var removable = GetTodoById(idToRemove);
-            if (removable != null)
-            {
-                todoDbContext.Remove(removable);
-                todoDbContext.SaveChanges();
-            }
+            todoDbContext.Remove(removable);
+            todoDbContext.SaveChanges();
         }
 
         public void EditTodo(Todo todo)
