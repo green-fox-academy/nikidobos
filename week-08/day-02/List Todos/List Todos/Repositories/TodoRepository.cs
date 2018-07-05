@@ -40,15 +40,8 @@ namespace List_Todos.Repositories
 
         public void EditTodo(Todo todo)
         {
-            //var toEdit = GetTodoById(idToEdit);
             todoDbContext.Update(todo);
             todoDbContext.SaveChanges();
-            //if (toEdit != null)
-            //{
-            //    //toEdit.Title = todo.Title;
-            //    //toEdit.IsUrgent = todo.IsUrgent;
-            //    //toEdit.IsDone = todo.IsDone;
-            //}
         }
 
         public Todo GetTodoById(long idToFind)
