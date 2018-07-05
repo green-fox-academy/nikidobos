@@ -17,7 +17,7 @@ namespace List_Todos.Repositories
 
         public Todo GetTodoById(long idToFind)
         {
-            return todoDbContext.Todos.ToList().FirstOrDefault(x => x.Id.Equals(idToFind)); ;
+            return todoDbContext.Todos.ToList().FirstOrDefault(x => x.Id.Equals(idToFind));
         }
 
         internal List<Todo> FindTodo(string searcher)
