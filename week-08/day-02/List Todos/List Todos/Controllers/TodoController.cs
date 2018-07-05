@@ -26,9 +26,9 @@ namespace List_Todos.Controllers
 
         [HttpGet("/")]
         [HttpGet("/list")]
-        public IActionResult List(long id)
+        public IActionResult List()
         {
-            return View(todoService.GetTodoById(id));
+            return View(todoService.GetAllTodos());
         }
 
         [HttpGet("/add")]
