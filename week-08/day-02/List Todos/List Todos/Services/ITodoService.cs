@@ -13,6 +13,6 @@ namespace List_Todos.Services
         List<Type> GetAllTodos();
         void EditTodo(Todo todo);
         void RemoveTodo(long id);
-        List<Type> GetTodoById(long id);
+        Todo GetTodoById(long id);
     }
 }
