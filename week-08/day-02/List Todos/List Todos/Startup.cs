@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using List_Todos.Repositories;
+using List_Todos.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,6 +29,10 @@ namespace List_Todos
             services.AddDbContext<TodoDbContext>(options => options.UseSqlServer(connectionString));
             services.AddTransient<TodoDbContext>();
             services.AddTransient<TodoRepository>();
+            services.AddMvc();
+            services.AddTransient<ITodoService, TodoService>();
+            services.AddTransient<AssigneeRepository>();
+            services.AddTransient<DbContext, TodoDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

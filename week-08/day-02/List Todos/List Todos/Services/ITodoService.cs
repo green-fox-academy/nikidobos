@@ -10,7 +10,7 @@ namespace List_Todos.Services
     {
         //CRUD
         void AddNewTodo(Todo todo);
-        List<Type> GetAllTodos();
+        List<Todo> GetAllTodos();
         void EditTodo(Todo todo);
         void RemoveTodo(long id);
         Todo GetTodoById(long id);

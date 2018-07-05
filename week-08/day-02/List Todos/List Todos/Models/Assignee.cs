@@ -10,5 +10,7 @@ namespace List_Todos.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
+
+        public ICollection<Todo> Todo { get; set; }
     }
 }

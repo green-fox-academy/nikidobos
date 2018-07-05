@@ -11,5 +11,7 @@ namespace List_Todos.Models
         public string Title { set; get; }
         public bool IsUrgent { set; get; }
         public bool IsDone { set; get; }
+
+        public Assignee Assignee { get; set; }
     }
 }

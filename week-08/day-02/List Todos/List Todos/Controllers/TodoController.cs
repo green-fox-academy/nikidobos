@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using List_Todos.Models;
 using List_Todos.Repositories;
+using List_Todos.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace List_Todos.Controllers
@@ -11,10 +12,11 @@ namespace List_Todos.Controllers
     [Route("/todo")]
     public class TodoController : Controller
     {
-        private TodoRepository todoRepository;
-        public TodoController(TodoRepository todoRepository)
+        private ITodoService todoService;
+
+        public TodoController(ITodoService todoService)
         {
-            this.todoRepository = todoRepository;
+            this.todoService = todoService;
         }
 
         public IActionResult Index()
@@ -24,9 +26,9 @@ namespace List_Todos.Controllers
 
         [HttpGet("/")]
         [HttpGet("/list")]
-        public IActionResult List(bool isDone, Todo todo)
+        public IActionResult List(long id)
         {
-            return View(todoRepository.ListAllTodos(isDone, todo));
+            return View(todoService.GetTodoById(id));
         }
 
         [HttpGet("/add")]
@@ -38,34 +40,28 @@ namespace List_Todos.Controllers
         [HttpPost("/add")]
         public IActionResult AddTodo(Todo todo)
         {
-            todoRepository.AddNewTodo(todo);
+            todoService.AddNewTodo(todo);
             return Redirect("list");
         }
 
         [HttpGet("/{id}/delete")]
         public IActionResult DeleteTodo(long id)
         {
-            todoRepository.RemoveTodo(id);
+            todoService.RemoveTodo(id);
             return Redirect("/list");
         }
 
         [HttpGet("/{id}/edit")]
         public IActionResult UpdateTodo(long id)
-        {            
-            return View(todoRepository.GetTodoById(id));
+        {
+            return View(todoService.GetTodoById(id));
         }
 
         [HttpPost("/{id}/edit")]
         public IActionResult UpdateTodo(Todo todo)
         {
-            todoRepository.EditTodo(todo);
+            todoService.EditTodo(todo);
             return Redirect("/list");
-        }
-
-        [HttpPost("/gettodo")]
-        public IActionResult SearchTodo(string searcher)
-        {
-            return View("list", todoRepository.FindTodo(searcher));
         }
     }
 }
