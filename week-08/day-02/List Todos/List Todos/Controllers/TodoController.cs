@@ -61,5 +61,11 @@ namespace List_Todos.Controllers
             todoRepository.EditTodo(todo);
             return Redirect("/list");
         }
+
+        [HttpPost("/gettodo")]
+        public IActionResult SearchTodo(string searcher)
+        {
+            return View("list", todoRepository.FindTodo(searcher));
+        }
     }
 }

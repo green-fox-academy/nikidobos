@@ -56,5 +56,11 @@ namespace List_Todos.Repositories
             var selectedTodoById = todoDbContext.Todos.ToList().FirstOrDefault(x => x.Id.Equals(idToFind));
             return selectedTodoById;
         }
+
+        internal List<Todo> FindTodo(string searcher)
+        {
+            var searchedTodo = todoDbContext.Todos.Where(x => x.Title.ToLower().Contains(searcher.ToLower())).ToList();
+            return searchedTodo;
+        }
     }
 }
