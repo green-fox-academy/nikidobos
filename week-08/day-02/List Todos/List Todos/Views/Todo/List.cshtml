@@ -1,29 +1,32 @@
 ﻿
 @model List<Todo>
 
-<div >
-    <h2>Todos for today</h2>
 
-    <a href="./add"><span>Add new ToDo</span></a>
-    <table class="container-fluid">
-        <tr>
-            <th>ID</th>
-            <th>ACTION</th>
-            <th>URGENT</th>
-            <th>DONE</th>
-            <th>DELETE</th>
-            <th>EDIT</th>
-        </tr>
-        @foreach (var todo in Model)
-        {
-            <tr>
-                <td>@todo.Id</td>
-                <td>@todo.Title</td>
-                <td>@todo.IsUrgent</td>
-                <td>@todo.IsDone</td>
-                <td><a href="./@todo.Id/delete"><span>Delete</span></a></td>
-                <td><a href="./@todo.Id/edit"><span>Edit</span></a></td>
-            </tr>
-        }
-    </table>
+<h2 style="text-align:center">TODOS FOR TODAY</h2>
+<br />
+<div style="text-align: center">
+    <a href="./add" class="btn btn-warning">Add new ToDo</a>
 </div>
+<br />
+
+<table class="container-fluid">
+    <tr>
+        <th>ID</th>
+        <th>ACTION</th>
+        <th>URGENT</th>
+        <th>DONE</th>
+        <th>DELETE</th>
+        <th>EDIT</th>
+    </tr>
+    @foreach (var todo in Model)
+    {
+        <tr>
+            <td>@todo.Id</td>
+            <td>@todo.Title</td>
+            <td>@todo.IsUrgent</td>
+            <td>@todo.IsDone</td>
+            <td><a href="./@todo.Id/delete"><span>Delete</span></a></td>
+            <td><a href="./@todo.Id/edit"><span>Edit</span></a></td>
+        </tr>
+    }
+</table>
