@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace List_Todos.Repositories
 {
-    public class TodoRepository
+    public class TodoRepository : IGeneralRepository<Todo>
     {
         private TodoDbContext todoDbContext;
         public TodoRepository(TodoDbContext todoDbContext)
@@ -15,45 +15,38 @@ namespace List_Todos.Repositories
             this.todoDbContext = todoDbContext;
         }
 
-        public List<Todo> ListAllTodos(bool isDone, Todo todo)
-        {
-            if (!todo.IsDone)
-            {
-                todoDbContext.Todos.ToList();
-            }
-            return todoDbContext.Todos.ToList();
-        }
-
-        public List<Todo> AddNewTodo(Todo todo)
-        {
-            todoDbContext.Todos.Add(todo);
-            todoDbContext.SaveChanges();
-            return todoDbContext.Todos.ToList();
-        }
-
-        public void RemoveTodo(long idToRemove)
-        {
-            var removable = GetTodoById(idToRemove);
-            todoDbContext.Remove(removable);
-            todoDbContext.SaveChanges();
-        }
-
-        public void EditTodo(Todo todo)
-        {
-            todoDbContext.Update(todo);
-            todoDbContext.SaveChanges();
-        }
-
         public Todo GetTodoById(long idToFind)
         {
-            var selectedTodoById = todoDbContext.Todos.ToList().FirstOrDefault(x => x.Id.Equals(idToFind));
-            return selectedTodoById;
+            return todoDbContext.Todos.ToList().FirstOrDefault(x => x.Id.Equals(idToFind)); ;
         }
 
         internal List<Todo> FindTodo(string searcher)
         {
             var searchedTodo = todoDbContext.Todos.Where(x => x.Title.ToLower().Contains(searcher.ToLower())).ToList();
             return searchedTodo;
+        }
+
+        public void Create(Todo element)
+        {
+            todoDbContext.Todos.Add(element);
+            todoDbContext.SaveChanges();
+        }
+
+        public List<Todo> GetAllElements()
+        {
+            return todoDbContext.Todos.ToList();
+        }
+
+        public void Update(Todo element)
+        {
+            todoDbContext.Update(element);
+            todoDbContext.SaveChanges();
+        }
+
+        public void Delete(Todo element)
+        {
+            todoDbContext.Remove(element);
+            todoDbContext.SaveChanges();
         }
     }
 }
