@@ -9,6 +9,15 @@
 </div>
 <br />
 
+<form role="search">
+    <div class="search-control">
+        <input type="search" id="site-search" name="searcher"
+               placeholder="Search the site..."
+               aria-label="Search through site content">
+        <button>Search</button>
+    </div>
+</form>
+
 <table class="container-fluid">
     <tr>
         <th>ID</th>
@@ -18,13 +27,13 @@
     </tr>
     @foreach (var todo in Model)
     {
-    <tr>
-        <td>@todo.Id</td>
-        <td>@todo.Title</td>
-        <td>@todo.IsUrgent</td>
-        <td>@todo.IsDone</td>
-        <td><a href=./@todo.Id/delete class="btn btn-danger">Delete</a>
-        <td><a href=./@todo.Id/edit class="btn btn-primary">Edit</a>
-    </tr>
+        <tr>
+            <td>@todo.Id</td>
+            <td>@todo.Title</td>
+            <td>@todo.IsUrgent</td>
+            <td>@todo.IsDone</td>
+            <td><a href=./@todo.Id/delete class="btn btn-danger">Delete</a>
+            <td><a href=./@todo.Id/edit class="btn btn-primary">Edit</a>
+        </tr>
     }
 </table>
