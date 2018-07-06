@@ -11,5 +11,6 @@ namespace Reddit.Repository
         List<Type> Read();
         void Update(Type element);
         void Delete(Type element);
+        Type GetPostById(int id);
     }
 }
