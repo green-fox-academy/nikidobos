@@ -9,7 +9,6 @@ namespace Reddit.Services
     interface IRedditService
     {
         //CRUD
-        List<Post> GetPostById(int id);
         void AddNewPost(Post post);
         List<Post> GetAllPosts();
         void UpdatePost(Post post);

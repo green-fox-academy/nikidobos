@@ -14,6 +14,7 @@ namespace Reddit.Services
         {
             this.redditRepository = redditRepository;
         }
+
         public void AddNewPost(Post post)
         {
             redditRepository.Create(post);
@@ -27,11 +28,6 @@ namespace Reddit.Services
         public List<Post> GetAllPosts()
         {
             return redditRepository.Read();
-        }
-
-        public List<Post> GetPostById(int id)
-        {
-            return;
         }
 
         public void UpdatePost(Post post)
