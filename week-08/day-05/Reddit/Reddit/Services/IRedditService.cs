@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Reddit.Services
 {
-    interface IRedditService
+    public interface IRedditService
     {
         //CRUD
         void AddNewPost(Post post);

@@ -9,8 +9,8 @@ namespace Reddit.Controllers
 {
     public class RedditController : Controller
     {
-        public RedditService service;
-        public RedditController(RedditService service)
+        public IRedditService service;
+        public RedditController(IRedditService service)
         {
             this.service = service;
         }
