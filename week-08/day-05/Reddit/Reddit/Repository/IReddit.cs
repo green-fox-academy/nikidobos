@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Reddit.Repository
 {
-    interface IReddit
+    public interface IReddit<Post>
     {
         void Create(Type element);
         List<Type> Read();
