@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Reddit.Models
 {
-    public class Reddit
+    public class Post
     {
         public int Id { get; set; }
         public int NumberOfVotes { get; set; }
