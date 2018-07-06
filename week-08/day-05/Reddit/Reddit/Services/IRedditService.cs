@@ -13,5 +13,6 @@ namespace Reddit.Services
         List<Post> GetAllPosts();
         void UpdatePost(Post post);
         void DeletePost(Post post);
+        Post GetPostById(int id);
     }
 }

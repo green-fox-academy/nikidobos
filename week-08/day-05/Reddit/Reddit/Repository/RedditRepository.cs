@@ -24,7 +24,7 @@ namespace Reddit.Repository
             redditDbContext.Remove(element);
         }
 
-        public Post GetPostById(int idToFind)
+        public Post GetElementById(int idToFind)
         {
             return redditDbContext.Posts.FirstOrDefault(x => x.Id.Equals(idToFind));
         }
@@ -39,7 +39,5 @@ namespace Reddit.Repository
             redditDbContext.Update(element);
             redditDbContext.SaveChanges();
         }
-
-
     }
 }
