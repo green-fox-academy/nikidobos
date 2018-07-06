@@ -1,0 +1,12 @@
+﻿@Model  List<Post>
+    @{
+        ViewData["Title"] = "List";
+    }
+
+    <h2>Trending Posts</h2>
+
+    @foreach (Post post in Model)
+    {
+        <p> @post.NumberOfVotes, @post.PostText</p>
+    }
+
