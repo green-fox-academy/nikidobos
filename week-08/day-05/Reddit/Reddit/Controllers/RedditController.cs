@@ -17,6 +17,12 @@ namespace Reddit.Controllers
         public IActionResult Index()
         {
             return View();
-        }        
+        }
+
+        [HttpGet("/")]
+        public IActionResult List()
+        {
+            return View(service.GetAllPosts());
+        }
     }
 }
