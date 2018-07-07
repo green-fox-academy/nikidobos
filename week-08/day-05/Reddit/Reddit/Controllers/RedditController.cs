@@ -25,11 +25,11 @@ namespace Reddit.Controllers
             return View(service.GetAllPosts());
         }
 
-        [HttpPost("/")]
-        public IActionResult List(int id)
+        [HttpGet("/{id}/increase")]
+        public IActionResult IncreaseVote(int id)
         {
             service.ChangeVote(id);
-            return View(service.GetAllPosts());
+            return RedirectToAction("List");
         }
     }
 }

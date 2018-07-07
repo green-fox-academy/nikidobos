@@ -2,11 +2,8 @@
 
 <h2>Trending Posts</h2>
 
-<form action="./" method="post">   
-        <button>+</button>
-</form>
 @foreach (Post post in Model)
 {
-    <p> @post.NumberOfVotes   @post.PostText</p>
+    <h2><a href="@post.Id/increase">+</a> @post.NumberOfVotes   @post.PostText</h2>
 }
 
