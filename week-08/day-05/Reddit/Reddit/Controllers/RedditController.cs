@@ -31,5 +31,12 @@ namespace Reddit.Controllers
             service.IncreaseVote(id);
             return RedirectToAction("List");
         }
+
+        [HttpGet("/{id}/decrease")]
+        public IActionResult DecreaseVote(int id)
+        {
+            service.DecreaseVote(id);
+            return RedirectToAction("List");
+        }
     }
 }

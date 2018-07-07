@@ -46,5 +46,12 @@ namespace Reddit.Services
         {
             redditRepository.Update(post);
         }
+
+        public void DecreaseVote(int id)
+        {
+            var forVoting = GetPostById(id);
+            forVoting.NumberOfVotes--;
+            redditRepository.Update(forVoting);
+        }
     }
 }

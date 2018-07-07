@@ -4,6 +4,6 @@
 
 @foreach (Post post in Model)
 {
-    <h2><a href="@post.Id/increase">+</a> @post.NumberOfVotes   @post.PostText</h2>
+     <h2><a href="@post.Id/increase" class="btn btn-success">+</a> <a href="@post.Id/decrease" class="btn btn-danger">-</a> @post.NumberOfVotes   @post.PostText</h2>
 }
 
