@@ -12,6 +12,5 @@ namespace Reddit.Repository
         void Update(Type element);
         void Delete(Type element);
         Type GetElementById(int id);
-        void ChangeVote();
     }
 }

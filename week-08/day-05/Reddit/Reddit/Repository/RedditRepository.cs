@@ -14,10 +14,6 @@ namespace Reddit.Repository
             this.redditDbContext = redditDbContext;
         }
 
-        public void ChangeVote()
-        {
-        }
-
         public void Create(Post element)
         {
             redditDbContext.Posts.Add(element);

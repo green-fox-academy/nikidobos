@@ -28,7 +28,7 @@ namespace Reddit.Controllers
         [HttpGet("/{id}/increase")]
         public IActionResult IncreaseVote(int id)
         {
-            service.ChangeVote(id);
+            service.IncreaseVote(id);
             return RedirectToAction("List");
         }
     }

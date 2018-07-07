@@ -20,9 +20,9 @@ namespace Reddit.Services
             redditRepository.Create(post);
         }
 
-        public void ChangeVote(int id)
+        public void IncreaseVote(int id)
         {
-            var forVoting = redditRepository.GetElementById(id);
+            var forVoting = GetPostById(id);
             forVoting.NumberOfVotes++;
             redditRepository.Update(forVoting);
         }
