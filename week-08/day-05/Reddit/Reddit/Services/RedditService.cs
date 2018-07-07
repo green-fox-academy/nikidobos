@@ -20,6 +20,11 @@ namespace Reddit.Services
             redditRepository.Create(post);
         }
 
+        public void ChangeVote(int id)
+        {
+            
+        }
+
         public void DeletePost(Post post)
         {
             redditRepository.Delete(post);
@@ -30,9 +35,16 @@ namespace Reddit.Services
             return redditRepository.Read();
         }
 
+        public Post GetPostById(int id)
+        {
+           return  redditRepository.GetElementById(id);
+        }
+
         public void UpdatePost(Post post)
         {
             redditRepository.Update(post);
         }
+
+
     }
 }

@@ -24,9 +24,9 @@ namespace Reddit.Repository
             redditDbContext.Remove(element);
         }
 
-        public Post GetElementById(int idToFind)
+        public Post GetElementById(int id)
         {
-            return redditDbContext.Posts.FirstOrDefault(x => x.Id.Equals(idToFind));
+            return redditDbContext.Posts.FirstOrDefault(x => x.Id.Equals(id));
         }
 
         public List<Post> Read()

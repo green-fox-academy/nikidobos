@@ -14,5 +14,6 @@ namespace Reddit.Services
         void UpdatePost(Post post);
         void DeletePost(Post post);
         Post GetPostById(int id);
+        void ChangeVote(int id);
     }
 }
