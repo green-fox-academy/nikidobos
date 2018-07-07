@@ -22,7 +22,8 @@ namespace Reddit.Services
 
         public void ChangeVote(int id)
         {
-            redditRepository.GetElementById(id).NumberOfVotes++;            
+            var forVoting = redditRepository.GetElementById(id);
+            forVoting.NumberOfVotes++;
         }
 
         public void DeletePost(Post post)

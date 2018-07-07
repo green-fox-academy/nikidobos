@@ -14,7 +14,7 @@ namespace Reddit.Repository
             this.redditDbContext = redditDbContext;
         }
 
-        public void ChangeVote(int id)
+        public void ChangeVote()
         {
         }
 
