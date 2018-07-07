@@ -24,5 +24,12 @@ namespace Reddit.Controllers
         {
             return View(service.GetAllPosts());
         }
+
+        [HttpPost("/")]
+        public IActionResult List(int id)
+        {
+            service.ChangeVote(id);
+            return View(service.GetAllPosts());
+        }
     }
 }

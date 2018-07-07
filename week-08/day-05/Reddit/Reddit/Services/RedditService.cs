@@ -22,7 +22,7 @@ namespace Reddit.Services
 
         public void ChangeVote(int id)
         {
-            
+            redditRepository.GetElementById(id).NumberOfVotes++;            
         }
 
         public void DeletePost(Post post)
@@ -37,14 +37,12 @@ namespace Reddit.Services
 
         public Post GetPostById(int id)
         {
-           return  redditRepository.GetElementById(id);
+           return redditRepository.GetElementById(id);
         }
 
         public void UpdatePost(Post post)
         {
             redditRepository.Update(post);
         }
-
-
     }
 }
