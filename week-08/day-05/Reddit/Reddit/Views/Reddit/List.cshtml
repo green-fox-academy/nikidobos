@@ -2,8 +2,12 @@
 
 <h2>Trending Posts</h2>
 
+<div>
+    <a href="./add" class="btn btn-primary">Submit new post</a>
+</div>
+
 @foreach (Post post in Model)
 {
-     <h2><a href="@post.Id/increase" class="btn btn-success">+</a> <a href="@post.Id/decrease" class="btn btn-danger">-</a> @post.NumberOfVotes   @post.PostText</h2>
+     <h3> @post.NumberOfVotes <a href="@post.Id/increase" class="btn btn-success">+</a> <a href="@post.Id/decrease" class="btn btn-danger">-</a> @post.PostText</h3>
 }
 
