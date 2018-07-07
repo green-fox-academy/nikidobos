@@ -16,7 +16,7 @@ namespace Reddit.Repository
 
         public void Create(Post element)
         {
-            redditDbContext.Posts.Add(element);
+            redditDbContext.Add(element);
             redditDbContext.SaveChanges();
         }
 

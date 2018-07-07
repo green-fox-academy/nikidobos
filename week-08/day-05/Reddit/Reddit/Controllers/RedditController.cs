@@ -41,13 +41,13 @@ namespace Reddit.Controllers
         }
 
         [HttpGet("/submit")]
-        public IActionResult AddNewPost()
+        public IActionResult AddPost()
         {
             return View();
         }
 
         [HttpPost("/submit")]
-        public IActionResult AddNewPost(Post post)
+        public IActionResult AddPost(Post post)
         {
             service.AddNewPost(post);
             return RedirectToAction("List");
