@@ -11,5 +11,6 @@ namespace Reddit.Models
         public int NumberOfVotes { get; set; }
         public string PostText { get; set; }
         public string Url { get; set; }
+        public string DateOfPost { get; set; }
     }
 }
