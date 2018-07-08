@@ -32,7 +32,8 @@ namespace Reddit.Repository
 
         public List<Post> Read()
         {
-            return redditDbContext.Posts.ToList();
+            var top10 = redditDbContext.Posts.ToList().OrderByDescending(x => x.NumberOfVotes).Take(10);
+            return top10.ToList();
         }
 
         public void Update(Post element)

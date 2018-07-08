@@ -4,10 +4,28 @@
 
 <div>
     <a href="./submit" class="btn btn-primary">Submit new post</a>
+    <br />
 </div>
 
-@foreach (Post post in Model)
-{
-     <p> @post.NumberOfVotes <a href="@post.Id/increase" class="btn btn-success btn-sm">+</a> <a href="@post.Id/decrease" class="btn btn-danger btn-sm">-</a> <a href="@post.Url"> @post.PostText </a> @post.DateOfPost </p>
-}
+<table class="container-fluid">
+    <tr>
+        <th>Votes</th>
+        <th> +</th>
+        <th> -</th>
+        <th>Post</th>
+        <th>Date of post</th>
+    </tr>
+    @foreach (Post post in Model)
+    {
+
+        <tr class="table-light" >
+            <td>@post.NumberOfVotes</td>
+            <td><a href="@post.Id/increase" class="btn btn-success btn-sm">+</a></td>
+            <td><a href="@post.Id/decrease" class="btn btn-danger btn-sm">-</a></td>
+            <td><a href="@post.Url"> @post.PostText </a></td>
+            <td>@post.DateOfPost</td>
+        </tr>
+    }
+</table>
+
 
