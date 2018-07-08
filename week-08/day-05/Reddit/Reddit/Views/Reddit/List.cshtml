@@ -1,11 +1,13 @@
 ﻿@model List<Post>
 
-<h2>Trending Posts</h2>
-
+<div style="text-align:center">
+    <h1>Trending Posts</h1>
+    <h2>Top 10</h2>
+</div>
 <div>
     <a href="./submit" class="btn btn-primary">Submit new post</a>
-    <br />
 </div>
+<br />
 
 <table class="container-fluid">
     <tr>
@@ -18,7 +20,7 @@
     @foreach (Post post in Model)
     {
 
-        <tr class="table-light" >
+        <tr class="table-light">
             <td>@post.NumberOfVotes</td>
             <td><a href="@post.Id/increase" class="btn btn-success btn-sm">+</a></td>
             <td><a href="@post.Id/decrease" class="btn btn-danger btn-sm">-</a></td>
