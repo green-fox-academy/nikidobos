@@ -10,9 +10,10 @@ namespace Frontend.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet("/")]
         public IActionResult Index()
         {
-            return View();
+            return File("index.html", "text/html")
         }
 
         public IActionResult About()
