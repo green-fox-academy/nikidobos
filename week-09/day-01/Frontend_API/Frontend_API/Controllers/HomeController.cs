@@ -103,5 +103,46 @@ namespace Frontend_API.Controllers
 
             return Json(new { error = "Please provide a working function!" });
         }
+
+        [HttpPost("arrays")]
+        public IActionResult Arrays(string what, [FromBody]Arrays array)
+        {
+            if (array.what == "sum")
+            {
+                int[] toSum = array.numbers;
+                int summed = toSum.Sum();
+                return Json(new
+                {
+                    result = summed
+                });
+            }
+            else if (array.what == "multiply")
+            {
+                int[] toMultiply = array.numbers;
+                int multiplied = 1;
+                foreach (int value in toMultiply)
+                {
+                    multiplied *= value;
+                }
+                return Json(new
+                {
+                    result = multiplied
+                });
+            }
+            else if (array.what == "double")
+            {
+                int output = 1;
+                foreach (int item in array.numbers)
+                {
+                    output *= item;
+                }
+
+                return Json(new { result = output });
+            }
+            else
+            {
+                return Json(new { error = "Please provide what to do with the numbers!" });
+            }
+        }
     }
 }

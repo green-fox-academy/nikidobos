@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace Frontend_API.Models
 {
-    public class Array
+    public class Arrays
     {
-        public int[] toModify { get; set; }
+        public int[] numbers { get; set; }
+        public string what { get; set; }
     }
 }
