@@ -78,7 +78,6 @@ namespace Frontend_API.Controllers
                 }
                 return Json(new
                 {
-                    until = until.until,
                     result = output
                 });
             }
@@ -92,7 +91,6 @@ namespace Frontend_API.Controllers
 
                 return Json(new
                 {
-                    until = until.until,
                     result = output
                 });
             }
@@ -105,20 +103,20 @@ namespace Frontend_API.Controllers
         }
 
         [HttpPost("arrays")]
-        public IActionResult Arrays(string what, [FromBody]Arrays array)
+        public IActionResult ArrayModifier([FromBody] ArrayModel toModify)
         {
-            if (array.what == "sum")
+            if (toModify.what == "sum")
             {
-                int[] toSum = array.numbers;
+                int[] toSum = toModify.numbers;
                 int summed = toSum.Sum();
                 return Json(new
                 {
                     result = summed
                 });
             }
-            else if (array.what == "multiply")
+            else if (toModify.what == "multiply")
             {
-                int[] toMultiply = array.numbers;
+                int[] toMultiply = toModify.numbers;
                 int multiplied = 1;
                 foreach (int value in toMultiply)
                 {
@@ -129,15 +127,15 @@ namespace Frontend_API.Controllers
                     result = multiplied
                 });
             }
-            else if (array.what == "double")
+            else if (toModify.what == "double")
             {
-                int output = 1;
-                foreach (int item in array.numbers)
+                int[] toDouble = toModify.numbers;
+                for (int i = 0; i < toDouble.Length; i++)
                 {
-                    output *= item;
+                    toDouble[i] *= 2;
                 }
 
-                return Json(new { result = output });
+                return Json(new { result = toDouble });
             }
             else
             {
