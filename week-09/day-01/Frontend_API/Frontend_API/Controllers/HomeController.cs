@@ -8,16 +8,15 @@ using Microsoft.AspNetCore.Mvc;
 namespace Frontend_API.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Home")]
     public class HomeController : Controller
     {
-        [HttpGet("/")]
+        [HttpGet("")]
         public IActionResult Index()
         {
             return File("index.html", "text/html");
         }
 
-        [HttpGet("/doubling")]
+        [HttpGet("doubling")]
         public IActionResult Doubling([FromQuery]int? input)
         {
             if (input != null)
@@ -31,6 +30,23 @@ namespace Frontend_API.Controllers
             else
             {
                 return Json(new { error = "Please provide an input!" });
+            }
+        }
+
+        [HttpGet("greeter")]
+        public IActionResult Greeter([FromQuery]string name, [FromQuery] string title)
+        {
+            if (name == null)
+            {
+                return Json(new { error = "Please provide a name!" });
+            }
+            else if (title == null)
+            {
+                return Json(new { error = "Please provide a title!" });
+            }
+            else
+            {
+                return Json(new { welcome_message = "Oh, hi there " + name + ", my dear " + title +"!" });
             }
         }
     }
