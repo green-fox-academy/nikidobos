@@ -2,7 +2,9 @@ using Frontend_API;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using System;
+using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace XUnitTestProject1
@@ -19,9 +21,11 @@ namespace XUnitTestProject1
         }
 
         [Fact]
-        public void Test1()
+        public async Task ShouldGetOKResponse()
         {
-
+            var response = await Client.GetAsync("/doubling");
+            var statusCode = response.StatusCode;
+            Assert.Equal(HttpStatusCode.OK, statusCode);
         }
     }
 }
