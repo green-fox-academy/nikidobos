@@ -10,6 +10,8 @@ namespace Reddit.Repository
     public class RedditDbContext : DbContext
     {
         public DbSet<Post> Posts { get; set; }
+        public DbSet<User> Users { get; set; }
+
         public RedditDbContext(DbContextOptions<RedditDbContext> options) : base(options)
         {
 
