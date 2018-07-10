@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Reddit.Repository;
 using Reddit.Services;
+using Reddit.ViewModels;
 
 namespace Reddit
 {
@@ -32,7 +33,7 @@ namespace Reddit
             services.AddTransient<IRedditService, RedditService>();
             services.AddTransient<UserRepository>();
             services.AddTransient<UserService>();
-
+            services.AddTransient<RedditViewModel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
