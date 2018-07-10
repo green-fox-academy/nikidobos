@@ -30,6 +30,9 @@ namespace Reddit
             services.AddTransient<DbContext, RedditDbContext>();
             services.AddTransient<RedditRepository>();
             services.AddTransient<IRedditService, RedditService>();
+            services.AddTransient<UserRepository>();
+            services.AddTransient<UserService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

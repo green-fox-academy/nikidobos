@@ -11,9 +11,11 @@ namespace Reddit.Controllers
     public class RedditController : Controller
     {
         public IRedditService service;
-        public RedditController(IRedditService service)
+        public UserService userservice;
+        public RedditController(IRedditService service, UserService userService)
         {
             this.service = service;
+            this.userservice = userservice;
         }
         public IActionResult Index()
         {
@@ -21,6 +23,12 @@ namespace Reddit.Controllers
         }
 
         [HttpGet("/")]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpGet("/list")]
         public IActionResult List()
         {
             return View(service.GetAllPosts());
