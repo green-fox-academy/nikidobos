@@ -5,27 +5,22 @@
 
 <h2>Login</h2>
 
-<head>
-    <link rel="stylesheet" href="login_form.css">
-</head>
 <body>
-    <fieldset class="field" action="/login" method="post">
+    <fieldset action="/login" method="post">
         <div>
-            <p class="accountlogin">Account login</p>
+            <p>Account login</p>
         </div>
         <div>
             <label for="name" class="name">Username</label>
             <br>
-            <input type="email" class="input" name="user_name">
+            <input type="email" class="input" name="UserName">
             <br>
         </div>
         <div>
             <label for="password" class="password">Password</label>
             <br>
-            <input type="password" id="input_password" class="input" name="user_password">
-            <p class="forgot">Forgot Password?</p>
+            <input type="password"  class="input" name="Password">
         </div>
-        <div>
             <br>
             <input type="submit" class="submit" value="Login">
     </fieldset>

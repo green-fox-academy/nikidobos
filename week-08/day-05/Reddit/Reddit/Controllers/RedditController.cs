@@ -11,11 +11,11 @@ namespace Reddit.Controllers
     public class RedditController : Controller
     {
         public IRedditService service;
-        public UserService userservice;
+        public UserService userService;
         public RedditController(IRedditService service, UserService userService)
         {
             this.service = service;
-            this.userservice = userservice;
+            this.userService = userService;
         }
         public IActionResult Index()
         {
@@ -26,6 +26,13 @@ namespace Reddit.Controllers
         public IActionResult Login()
         {
             return View();
+        }
+
+        [HttpPost("/add")]
+        public IActionResult Login(User user)
+        {
+            userService.AddNewUser(user);
+            return Redirect("list");
         }
 
         [HttpGet("/list")]
