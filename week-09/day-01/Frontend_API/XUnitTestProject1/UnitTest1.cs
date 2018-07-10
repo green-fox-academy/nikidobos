@@ -1,6 +1,8 @@
 using Frontend_API;
+using Frontend_API.Controllers;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Newtonsoft.Json;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -35,5 +37,14 @@ namespace XUnitTestProject1
             var statusCode = response.StatusCode;
             Assert.Equal(HttpStatusCode.NotFound, statusCode);
         }
+
+        [Fact]
+        public async Task ShouldGetKutya()
+        {
+            var response = await Client.GetAsync("appenda/{appendable}");
+            var codeMonk = JsonConvert.DeserializeObject<HomeController>(await response.Content.ReadAsStringAsync());
+            Assert.NotEqual("kutya", "kuty");
+        }
+
     }
 }
