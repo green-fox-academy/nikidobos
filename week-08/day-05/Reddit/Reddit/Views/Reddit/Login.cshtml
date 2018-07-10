@@ -5,24 +5,15 @@
 
 <h2>Login</h2>
 
-<body>
-    <fieldset action="/login" method="post">
-        <div>
-            <p>Account login</p>
-        </div>
-        <div>
-            <label for="name" class="name">Username</label>
-            <br>
-            <input type="email" class="input" name="UserName">
-            <br>
-        </div>
-        <div>
-            <label for="password" class="password">Password</label>
-            <br>
-            <input type="password"  class="input" name="Password">
-        </div>
-            <br>
-            <input type="submit" class="submit" value="Login">
-    </fieldset>
-</body>
+<form action="/" method="post">
+    <p>Account login</p>
+    <br>
+    <p>Username</p>
+    <input type="text" class="input" name="UserName">
+    <br>
+    <p>Password</p>
+    <input type="password" class="input" name="Password">
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 

@@ -28,11 +28,11 @@ namespace Reddit.Controllers
             return View();
         }
 
-        [HttpPost("/add")]
+        [HttpPost("/")]
         public IActionResult Login(User user)
         {
             userService.AddNewUser(user);
-            return Redirect("list");
+            return RedirectToAction("list");
         }
 
         [HttpGet("/list")]
