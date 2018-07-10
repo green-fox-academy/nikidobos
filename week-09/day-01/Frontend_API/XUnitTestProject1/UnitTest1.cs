@@ -27,5 +27,13 @@ namespace XUnitTestProject1
             var statusCode = response.StatusCode;
             Assert.Equal(HttpStatusCode.OK, statusCode);
         }
+
+        [Fact]
+        public async Task ShouldGetNotFound()
+        {
+            var response = await Client.GetAsync("/doubling2");
+            var statusCode = response.StatusCode;
+            Assert.Equal(HttpStatusCode.NotFound, statusCode);
+        }
     }
 }
