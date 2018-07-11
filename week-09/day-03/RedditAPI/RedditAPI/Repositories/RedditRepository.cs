@@ -8,6 +8,13 @@ namespace RedditAPI.Repositories
 {
     public class RedditRepository : IGenericRepository<Post>
     {
+        private RedditDbContext dbContext;
+
+        public RedditRepository(RedditDbContext dbContext)
+        {
+            this.dbContext = dbContext;
+        }
+
         public void Create(Post post)
         {
             throw new NotImplementedException();
