@@ -25,13 +25,11 @@ namespace RedditAPI
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=redditREST;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddMvc();
-            services.AddDbContext<RedditDbContext>(options => options.UseSqlServer(connectionString));
-            services.AddTransient<DbContext, RedditDbContext>();
+            services.AddDbContext<RedditDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("RedditREST")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
