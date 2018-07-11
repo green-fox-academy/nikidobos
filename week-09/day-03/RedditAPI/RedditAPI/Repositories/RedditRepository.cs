@@ -18,11 +18,13 @@ namespace RedditAPI.Repositories
         public void Create(Post post)
         {
             dbContext.Add(post);
+            dbContext.SaveChanges();
         }
 
         public void Delete(Post post)
         {
             dbContext.Remove(post);
+            dbContext.SaveChanges();
         }
 
         public List<Post> Read()
@@ -33,6 +35,7 @@ namespace RedditAPI.Repositories
         public void Update(Post post)
         {
             dbContext.Update(post);
+            dbContext.SaveChanges();
         }
     }
 }

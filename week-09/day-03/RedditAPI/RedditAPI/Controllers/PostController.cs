@@ -22,10 +22,12 @@ namespace RedditAPI.Controllers
         }
 
         [HttpGet("posts")]
-        public IActionResult List()
+        public IActionResult List(string input)
         {
-            return Json(new { });
-        }
+            return Json(new
+            {
 
+            });
+        }
     }
 }
