@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RedditAPI.Models;
 using RedditAPI.Services;
 
 namespace RedditAPI.Controllers
@@ -23,6 +24,16 @@ namespace RedditAPI.Controllers
             return Json(new
             {
                 posts = service.GetAllPosts()
+            });
+        }
+
+        [HttpPost("/posts")]
+        public IActionResult List([FromBody]Post newPost)
+        {
+            service.AddNewPost(newPost);
+            return Json(new
+            {
+                newPost
             });
         }
     }
