@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Reddit.Services;
+﻿using Microsoft.AspNetCore.Mvc;
+using RedditAPI.Services;
 
 namespace RedditAPI.Controllers
 {
-    [Produces("application/json")]
+    [Route("")]
     public class HomeController : Controller
     {
         private RedditService service;
@@ -21,12 +17,12 @@ namespace RedditAPI.Controllers
             return View();
         }
 
-        [HttpGet("posts")]
-        public IActionResult List(string input)
+        [HttpGet("/posts")]
+        public IActionResult List()
         {
             return Json(new
             {
-
+                posts = service.GetAllPosts()
             });
         }
     }

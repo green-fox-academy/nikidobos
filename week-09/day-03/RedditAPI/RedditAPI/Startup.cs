@@ -11,7 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using RedditAPI.Models;
 using RedditAPI.Repositories;
+using RedditAPI.Services;
 
 namespace RedditAPI
 {
@@ -28,13 +30,19 @@ namespace RedditAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddDbContext<RedditDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("RedditREST")));
+            services.AddTransient<RedditDbContext>();
+            services.AddTransient<RedditRepository>();
+            services.AddTransient<RedditService>();
+            services.AddTransient<IGenericRepository<Post>, RedditRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseMvcWithDefaultRoute();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -45,7 +53,6 @@ namespace RedditAPI
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
         }
     }
 }
