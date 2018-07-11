@@ -21,7 +21,7 @@ namespace RedditAPI.Controllers
             return View();
         }
 
-        [HttpGet("list")]
+        [HttpGet("posts")]
         public IActionResult List()
         {
             return Json(new { });
