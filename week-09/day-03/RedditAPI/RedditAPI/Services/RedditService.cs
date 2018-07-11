@@ -17,6 +17,7 @@ namespace RedditAPI.Services
 
         public void AddNewPost(Post post)
         {
+            post.Timestamp = DateTime.Now.ToString("yyyy.MM.dd H:mm");
             redditRepository.Create(post);
         }
 
