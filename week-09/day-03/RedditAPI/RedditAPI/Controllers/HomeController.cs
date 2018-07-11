@@ -13,6 +13,5 @@ namespace RedditAPI.Controllers
         {
             return View();
         }
-
     }
 }
