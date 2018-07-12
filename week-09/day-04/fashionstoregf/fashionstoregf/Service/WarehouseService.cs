@@ -12,8 +12,6 @@ namespace fashionstoregf.Service
     {
         public WarehouseRepository warehouseRepository;
 
-        public object Category { get; private set; }
-
         public WarehouseService(WarehouseRepository warehouseRepository)
         {
             this.warehouseRepository = warehouseRepository;
@@ -46,17 +44,17 @@ namespace fashionstoregf.Service
 
         public Warehouse GetItem(string itemName, string size)
         {
-            var selectedItem = warehouseRepository.Read().FirstOrDefault((x => x.ItemName.Equals(itemName)&&(x.Size.Equals(size))));
+            var selectedItem = warehouseRepository.Read().FirstOrDefault((x => x.ItemName.Equals(itemName) && (x.Size.Equals(size))));
             return selectedItem;
         }
 
-        public WarehouseViewModel GetAllDatas()
+        public WarehouseViewModel GetSelection()
         {
             return new WarehouseViewModel()
             {
                 Warehouses = warehouseRepository.Read(),
-                Sizes = warehouseRepository.GetAllSizes(),
-                ItemNames = warehouseRepository.GetAllItemNames()
+                Sizes = warehouseRepository.GetAllSize(),
+                ItemNames = warehouseRepository.GetAllItemName()
             };
         }
 
@@ -67,7 +65,7 @@ namespace fashionstoregf.Service
             {
                 ItemName = ItemName,
                 Quantity = Quantity,
-                SubtotalPrice = (double)searchedItem.UnitPrice * Quantity,
+                SubtotalPrice = (double) searchedItem.UnitPrice * Quantity,
                 Manufacturer = searchedItem.Manufacturer,
                 Category = searchedItem.Category
             };

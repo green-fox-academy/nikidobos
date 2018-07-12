@@ -38,14 +38,14 @@ namespace fashionstoregf.Repositories
             dbContext.SaveChanges();
         }
 
-        public List<string> GetAllItemNames()
+        public List<string> GetAllItemName()
         {
             return dbContext.Warehouse
                 .Include(warehouse => warehouse.ItemName).GroupBy(w => w.ItemName).Select(x => x.Key)
                 .ToList();
         }
 
-        public List<string> GetAllSizes()
+        public List<string> GetAllSize()
         {
             return dbContext.Warehouse
                 .Include(warehouse => warehouse.Size).GroupBy(w => w.Size).Select(x => x.Key)

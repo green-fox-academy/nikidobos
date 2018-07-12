@@ -39,7 +39,6 @@ namespace fashionstoregf
             services.AddTransient<gffashionstoreContext>();
             services.AddTransient<WarehouseRepository>();
             services.AddTransient<WarehouseService>();
-            services.AddTransient<WarehouseViewModel>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

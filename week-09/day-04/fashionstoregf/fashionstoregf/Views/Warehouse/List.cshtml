@@ -6,17 +6,17 @@
 <h2>Green Fox Fashio Webstore</h2>
 <form action="/warehouse/summary" method="post">
     <select name="ItemName">
-        @foreach (var item in @Model.ItemNames)
+        @foreach (var item in Model.ItemNames)
         {
-            <option value="@item ">@item </option>
+            <option value="@item">@item </option>
         }
 
     </select>
 
     <select name="Size">
-        @foreach (var item in @Model.Sizes)
+        @foreach (var item in Model.Sizes)
         {
-            <option value="@item ">@item </option>
+            <option value="@item">@item </option>
         }
     </select>
 
