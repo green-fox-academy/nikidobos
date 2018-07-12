@@ -37,11 +37,6 @@ namespace fashionstoregf.Service
             warehouseRepository.Delete(ware);
         }
 
-        //public Warehouse GetByItemName(string itemName)
-        //{
-        //    return warehouseRepository.Read().FirstOrDefault(x => x.ItemName.Contains(itemName));
-        //}
-
         public Warehouse GetItem(string itemName, string size)
         {
             var selectedItem = warehouseRepository.Read().FirstOrDefault((x => x.ItemName.Equals(itemName) && (x.Size.Equals(size))));
