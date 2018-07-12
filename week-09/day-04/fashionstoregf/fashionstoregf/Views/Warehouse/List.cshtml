@@ -1,0 +1,47 @@
+﻿@model fashionstoregf.ViewModesl.WarehouseViewModel
+@{
+    ViewData["Title"] = "View";
+}
+
+<h2>Green Fox Fashio Webstore</h2>
+<form action="/warehouse/summary" method="post">
+    <select name="ItemName">
+        @foreach (var item in @Model.ItemNames)
+        {
+            <option value="@item ">@item </option>
+        }
+
+    </select>
+
+    <select name="Size">
+        @foreach (var item in @Model.Sizes)
+        {
+            <option value="@item ">@item </option>
+        }
+    </select>
+
+    <input type="number" name="Quantity" required />
+    <button type="submit">GET TOTAL</button>
+</form>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Manufacturer</th>
+        <th>Category</th>
+        <th>Size</th>
+        <th>Unit Price</th>
+    </tr>
+
+    @foreach (var item in Model.Warehouses)
+    {
+        <tr>
+            <td>@item.ItemName</td>
+            <td>@item.Manufacturer</td>
+            <td>@item.Category</td>
+            <td>@item.Size</td>
+            <td>@item.UnitPrice</td>
+        </tr>
+    }
+</table>
+
+
