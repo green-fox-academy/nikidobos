@@ -25,7 +25,7 @@ namespace fashionstoregf.Controllers
         [HttpGet("/warehouse")]
         public IActionResult List()
         {
-            return View(service.GetAllDatas());
+            return View(service.GetSelection());
         }
 
         [HttpPost("/warehouse/summary")]

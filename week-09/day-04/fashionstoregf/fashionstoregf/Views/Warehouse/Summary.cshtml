@@ -2,14 +2,25 @@
 @{
     ViewData["Title"] = "Summary";
 }
+<div style="text-align: center">
+    <h2>Green Fox Fashion Webstore</h2>
+    <h2>Summary</h2>
+</div>
+<table>
+    <tr style="font-weight:bold">
+        <th>Name</th>
+        <th>Manufacturer</th>
+        <th>Category</th>
+        <th>Size</th>
+        <th>Unit Price</th>
+    </tr>
+    <tr>
+        <td>@Model.ItemName</td>
+        <td>@Model.Manufacturer</td>
+        <td>@Model.Category</td>
+        <td>@Model.Quantity</td>
+        <td>@Model.SubtotalPrice</td>
+    </tr>
+</table>
 
-<h2>Summary</h2>
-
-
-<p>@Model.ItemName</p>
-<p>@Model.Manufacturer</p>
-<p>@Model.Category</p>
-<p>@Model.Quantity</p>
-<p>@Model.SubtotalPrice</p>
-
-<a href=./list>Back to main</a>
+<a href="/">Back to main</a>
