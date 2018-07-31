@@ -15,6 +15,7 @@ public class TodoController {
 
   @RequestMapping("/")
   public String todos(Map<String, Object> model){
+    model.put("title", "feed the monkey");
     return "alltodos";
   }
 
