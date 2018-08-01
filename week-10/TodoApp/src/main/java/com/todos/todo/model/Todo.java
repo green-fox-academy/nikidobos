@@ -2,6 +2,7 @@ package com.todos.todo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Date;
 
 @Entity
 public class Todo {
@@ -9,6 +10,8 @@ public class Todo {
   @Id
   private long id;
   private String title;
+  private boolean urgent;
+  private boolean done;
 
   public long getId() {
     return id;
