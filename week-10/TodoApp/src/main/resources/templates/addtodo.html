@@ -3,9 +3,11 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add new todo</title>
 </head>
 <body>
-<p th:text="${title}">Default todo</p>
+<p>Add new ToDo</p>
+<input th:method="post" th:value="/addtodo">
+<input type="submit" class="button" name="save" value="Save">
 </body>
 </html>
