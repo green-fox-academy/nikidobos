@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit selected todo</title>
+</head>
+<body>
+<form th:object="${selectedTodo}" method="POST">
+    <p>Name of todo</p>
+    <input type="text" th:value="${selectedTodo.title}">
+    <p>Is it ugernt?</p>
+    <input type="checkbox" th:value="${selectedTodo.urgent}">
+    <p>Is it done?</p>
+    <input type="checkbox" th:value="${selectedTodo.done}">
+    <button name="editTodo" type="submit" value="{selectedTodo.id}">
+</form>
+</body>
+</html>

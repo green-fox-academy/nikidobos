@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new Todo</title>
+</head>
+<body>
+<form action="/addtodo" method="POST" >
+    <p>Name of todo</p>
+    <input type="text" name="title">
+    <p>Is it ugernt?</p>
+    <input type="checkbox" name="urgent">
+    <p>Is it done?</p>
+    <input type="checkbox" name="done">
+    <button value="submit" type="submit">Submit</button>
+</form>
+</body>
+</html>

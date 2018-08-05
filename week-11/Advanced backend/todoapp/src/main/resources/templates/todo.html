@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>List all todos</title>
+</head>
+<body>
+<p>todos</p>
+<table border="1px">
+    <tr>
+        <th>Id</th>
+        <th>Todo</th>
+        <th>Is it urgent?</th>
+        <th>Is it done?</th>
+    </tr>
+    <tr th:each="todo : ${todos}">
+        <td th:text="${todo.id}"></td>
+        <td th:text="${todo.title}"></td>
+        <td th:text="${todo.urgent}"></td>
+        <td th:text="${todo.done}"></td>
+    </tr>
+</table>
+</body>
+</html>
