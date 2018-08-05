@@ -7,13 +7,18 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+import static org.hibernate.cfg.AvailableSettings.USER;
+
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+  private static final String USER = "USER";
+  private static final String ADMIN = "ADMIN";
 
   @Override
   public void configure(HttpSecurity httpSecurity) throws Exception {
     httpSecurity.authorizeRequests()
-            .antMatchers("/rest").hasRole("USER")
+            .antMatchers("/rest").hasRole(USER)
         .and()
             .formLogin();
   }
@@ -21,9 +26,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Autowired
   public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
     auth.inMemoryAuthentication()
-          .withUser("john").password("pw").roles("USER")
+          .withUser("john").password("pw").roles(USER)
         .and()
-        .withUser("emily").password("apple").roles("USER","ADMIN");
+        .withUser("emily").password("apple").roles(USER, ADMIN);
   }
 }
 
