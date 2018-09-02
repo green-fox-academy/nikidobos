@@ -13,7 +13,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Allergies {
+public class Allergy {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
