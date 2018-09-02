@@ -3,11 +3,9 @@ package com.nikidobos.foodallergytracker.Client;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -22,6 +20,8 @@ public class Client {
   private String location;
   private Date dateOfBirth;
   private Date dateOfRegistration;
+  @ManyToMany
+  private List<Allergy> allergies;
 
 }
 
