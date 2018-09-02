@@ -1,17 +1,17 @@
 package com.nikidobos.foodallergytracker.Client;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name="clients")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Client {
 
   @Id
@@ -20,7 +20,16 @@ public class Client {
   private String firstName;
   private String lastName;
   private String location;
-  private Date dateOfBirth;
-  private Date dateOfRegistration;
+  private String dateOfBirth;
+  private String dateOfRegistration;
+
+  public Client(String firstName, String lastName, String location, String dateOfBirth,
+                String dateOfRegistration) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.location = location;
+    this.dateOfBirth = dateOfBirth;
+    this.dateOfRegistration = dateOfRegistration;
+  }
 }
 
