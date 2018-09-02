@@ -6,6 +6,76 @@
     <title>Add new Client</title>
 </head>
 <body>
-
+<h2>Add new client</h2>
+<form action="/clients/new" method="post">
+    <div>
+        <label for="firstName">First name: </label>
+        <input type="text" name="firstName" id="firstName">
+    </div>
+    <div>
+        <label for="lastName">Last name: </label>
+        <input type="text" name="lastName" id="lastName">
+    </div>
+    <div>
+        <a>Location: </a>
+        <div>
+            <input type="radio" name="location" id="BudapestI" value="BudapestI">
+            <label for="BudapestI">Budapest I.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestII" value="BudapestII">
+            <label for="BudapestII">Budapest II.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestIII" value="BudapestIII">
+            <label for="BudapestIII">Budapest III.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestIV" value="BudapestIV">
+            <label for="BudapestIV">Budapest IV.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestV" value="BudapestV">
+            <label for="BudapestV">Budapest V.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestVI" value="BudapestVI">
+            <label for="BudapestVI">Budapest VI.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestVII" value="BudapestVII">
+            <label for="BudapestVII">Budapest VII.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestVIII" value="BudapestVIII">
+            <label for="BudapestVIII">Budapest VIII.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestIX" value="BudapestIX">
+            <label for="BudapestIX">Budapest IX.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestX" value="BudapestX">
+            <label for="BudapestX">Budapest X.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestXI" value="BudapestXI">
+            <label for="BudapestXI">Budapest XI.</label>
+        </div>
+        <div>
+            <input type="radio" name="location" id="BudapestXII" value="BudapestXII">
+            <label for="BudapestXII">Budapest XII.</label>
+        </div>
+    </div>
+    <div>
+        <label for="dateOfBirth">Date of birth: </label>
+        <input type="date" name="dateOfBirth" id="dateOfBirth">
+    </div>
+    <div>
+        <label for="dateOfRegistration">Date of registration: </label>
+        <input type="date" name="dateOfRegistration" id="dateOfRegistration">
+    </div>
+    <button type="submit">Save</button>
+</form>
 </body>
 </html>
