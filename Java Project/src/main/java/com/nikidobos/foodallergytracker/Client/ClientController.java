@@ -16,6 +16,12 @@ public class ClientController {
     this.clientService = clientService;
   }
 
+  @GetMapping("/clients")
+  public String listClients(Model model){
+    model.addAttribute("clients", clientService.getAllClients());
+    return "clients";
+  }
+
   @GetMapping("/clients/new")
   public String addNewClient(){
     return "addnewclient";

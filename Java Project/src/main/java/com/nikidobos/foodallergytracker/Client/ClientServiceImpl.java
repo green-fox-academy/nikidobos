@@ -3,6 +3,8 @@ package com.nikidobos.foodallergytracker.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ClientServiceImpl implements ClientService {
 
@@ -17,6 +19,11 @@ public class ClientServiceImpl implements ClientService {
   public Client saveNewClient(Client client) {
     clientRepository.save(client);
     return client;
+  }
+
+  @Override
+  public Iterable<Client> getAllClients() {
+    return clientRepository.findAll();
   }
 }
 

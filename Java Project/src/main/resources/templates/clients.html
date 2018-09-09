@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>List of clients</title>
+</head>
+<body>
+<table>
+    <tr th:each="client : ${clients}">
+        <td th:text="${client.getFirstName()}"></td>
+    </tr>
+</table>
+</body>
+</html>
