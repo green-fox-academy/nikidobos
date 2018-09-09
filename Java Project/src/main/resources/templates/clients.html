@@ -6,9 +6,12 @@
     <title>List of clients</title>
 </head>
 <body>
-<table>
+<table border="1px">
     <tr th:each="client : ${clients}">
-        <td th:text="${client.getFirstName()}"></td>
+        <td th:text="${client.firstName}"></td>
+        <td th:text="${client.lastName}"></td>
+        <td th:text="${client.location}"></td>
+        <td th:text="${client.dateOfBirth}"></td>
     </tr>
 </table>
 </body>
